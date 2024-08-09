@@ -7,8 +7,8 @@ first_name: Felipe
 middle_name: Taha
 last_name: Sant'Ana
 email: fts[letters_order]@gmail.com
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-footer_text: >
+description: #> # the ">" symbol means to ignore newlines until "footer_text:"
+footer_text: #>
 keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -440,7 +440,7 @@ enable_video_embedding: false # enables video embedding for bibtex entries. If f
 # The integrity hash is used to ensure that the library is not tampered with.
 # Integrity hashes not provided by the libraries were generated using https://www.srihash.org/
 third_party_libraries:
-  download: false # if true, download the versions of the libraries specified below and use the downloaded files
+  download: true # if true, download the versions of the libraries specified below and use the downloaded files
   bootstrap-table:
     integrity:
       css: "sha256-uRX+PiRTR4ysKFRCykT8HLuRCub26LgXJZym3Yeom1c="

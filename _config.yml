@@ -6,9 +6,12 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Felipe
 middle_name: Taha
 last_name: Sant'Ana
-email: fts[letters_order]@gmail.com
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
+email: fts62019@gmail.com
+description: > 
+Felipe's website.
+# the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: > 
+Welcome.
 keywords: # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -157,13 +160,13 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: ignantropo # put your disqus shortname
+#disqus_shortname: ignantropo # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
-external_sources:
+#external_sources:
 #  - name: medium.com
 #    rss_url: https://medium.com/
 #  - name: Google Blog

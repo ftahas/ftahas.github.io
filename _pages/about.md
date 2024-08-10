@@ -6,7 +6,7 @@ subtitle: We are all Earthlings.
 
 profile:
   align: right
-  image: world.jpg
+  image: w2.jpg
   image_circular: false # crops the image to make it circular
   more_info: #>
 #    <p>555 your office number</p>

@@ -11,7 +11,7 @@ related_posts: false
 For $$ \mathrm{Re}(z)>1 $$, the Riemann zeta function is defined as 
 
 \begin{equation}
-\zeta(z) = \sum_{n=1}^\infty \frac{1}{n^{-z}}
+\zeta(z) = \sum_{n=1}^\infty \frac{1}{n^{-z}}.
 \end{equation}
 
 
@@ -22,4 +22,4 @@ The Riemann zeta function is connected to prime numbers through the Euler produc
 $$ \mathbb{P} $$ is the set of prime numbers. 
 
 
-To be continued...
+To be continued ...

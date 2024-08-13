@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mobile interacting impurity in 1g gases"
+title: "Mobile interacting impurity in one-dimensional gases"
 date: 2022-02-16 16:11:00-0400
 inline: false
 related_posts: false

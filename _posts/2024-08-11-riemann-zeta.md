@@ -13,6 +13,11 @@ For $$ \mathrm{Re}(z)>1 $$, the Riemann zeta function is defined as
 \begin{equation}
 \zeta(z) = 1+\frac{1}{2^z}+\frac{1}{3^z} + \frac{1}{4^z}+\frac{1}{5^z}+\dots = \sum_{n=1}^\infty \frac{1}{n^{z}}= \frac{1}{\Gamma(z)} \int_0^\infty dx \, \frac{x^{z-1}}{e^{z}-1},
 \end{equation}
+where 
+\begin{equation}
+    \Gamma(z) = \int_0^\infty  dx \, x^{z-1} e^{-x},
+\end{equation}
+is the gamma function. 
 
 
 The Riemann zeta function is connected to prime numbers through the Euler product representation: 

@@ -32,7 +32,7 @@
       "startDate": "2022",
       "endDate": "2024",
       "summary": "PI of the Polonez Bis 1 project CIQS: Correlation aspects of Interacting Quantum Systems.",
-      "highlights": ["Integrable models","Quantum Field Theory"]
+      "highlights": ["Integrable models", "Quantum Field Theory"]
     },
     {
       "name": "Faculty of Physics, University of Warsaw",
@@ -50,7 +50,7 @@
       "startDate": "2016",
       "endDate": "2020",
       "summary": "A study on quantum gases: bosons in optical lattices and the one-dimensional interacting Bose gas",
-      "highlights": ["Bose gases","One-dimensional interacting systems"]
+      "highlights": ["Bose gases", "One-dimensional interacting systems"]
     },
     {
       "name": "Nice Institute of Physics, Université Côte d'Azur",
@@ -68,7 +68,7 @@
       "startDate": "2013",
       "endDate": "2015",
       "summary": "Collision probability estimation for autonomous robots in dynamical environments",
-      "highlights": ["Autonomous robots","Dynamical Systems"]
+      "highlights": ["Autonomous robots", "Dynamical Systems"]
     }
   ],
   "education": [
@@ -81,7 +81,7 @@
       "startDate": "2016",
       "endDate": "2020",
       "score": "10",
-      "courses": ["Bose gases","Interacing models","Quantum many-body systems"]
+      "courses": ["Bose gases", "Interacing models", "Quantum many-body systems"]
     },
     {
       "institution": "Sao Carlos School of Engineering, University of Sao Paulo",
@@ -92,7 +92,7 @@
       "startDate": "2013",
       "endDate": "2015",
       "score": "10",
-      "courses": ["Autonomous robots","Dynamical Systems"]
+      "courses": ["Autonomous robots", "Dynamical Systems"]
     },
     {
       "institution": "Sao Carlos Insitute of Physics, University of Sao Paulo",
@@ -103,7 +103,7 @@
       "startDate": "2007",
       "endDate": "2012",
       "score": "10",
-      "courses": ["Quantum mechanics","Statistical Physics"]
+      "courses": ["Quantum mechanics", "Statistical Physics"]
     }
   ],
   "certificates": [
@@ -191,14 +191,7 @@
       "name": "Programming/Computational",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Fortran",
-        "Python",
-        "C, C++",
-        "LaTeX",
-        "Mathematica",
-        "Linux"
-      ]
+      "keywords": ["Fortran", "Python", "C, C++", "LaTeX", "Mathematica", "Linux"]
     }
   ],
   "languages": [
@@ -211,7 +204,7 @@
       "language": "English",
       "fluency": "Fluent",
       "icon": ""
-    }, 
+    },
     {
       "language": "Spanish",
       "fluency": "Advanced",

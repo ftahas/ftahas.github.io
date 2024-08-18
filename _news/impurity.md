@@ -6,8 +6,7 @@ inline: false
 related_posts: false
 ---
 
-
-I am pleased to share that we have a new paper out entitled "Mobile impurity in a one-dimensional gas at finite temperatures".   
+I am pleased to share that we have a new paper out entitled "Mobile impurity in a one-dimensional gas at finite temperatures".
 
 # Abstract
 

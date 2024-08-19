@@ -44,7 +44,7 @@ and subtracting again we have
 \left(1- \frac{1}{3^z} \right)\left(1- \frac{1}{2^z} \right) \zeta(z) = 1+ \frac{1}{5^z}+ \frac{1}{7^z}+ \frac{1}{11^z} + \frac{1}{13^z} + \frac{1}{17^z} + \dots,
 \end{equation}
 and now all the terms multiple of $$3$$ are gone.
-If we keep multiply by $$1/p^z$$ where $$p$$ is a prime number, we will eventually get rid of all terms and be only left with $$1$$, as all numbers can be factorized as a product of prime numbers. Thence,
+If we keep multiplying by $$1/p^z$$ where $$p$$ is a prime number, we will eventually get rid of all terms and be only left with $$1$$, as all numbers can be factorized as a product of prime numbers. Thence,
 \begin{equation}
 \dots \times \left(1- \frac{1}{11^z} \right)\left(1- \frac{1}{7^z} \right)\left(1- \frac{1}{5^z} \right)\left(1- \frac{1}{3^z} \right)\left(1- \frac{1}{2^z} \right) \zeta(z) = 1,
 \end{equation}

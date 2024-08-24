@@ -64,7 +64,7 @@ As we know that the sum is approximately equal the integral, at least it scales 
 \begin{equation}
 \sum*{n=1}^N \frac{1}{n} = \int*1^N \frac{1}{x} dx + \gamma = \log(N) +\gamma.
 \end{equation}
-Therefore, as $$\log(N)$$ has no upper bound, i.e. $$\lim\_{N\to \infty} \log(N) \to \infty$$, the sum also diverges as $$N\to \infty$$.
+Therefore, as $$\log(N)$$ has no upper bound, i.e. $$\lim_{N\to \infty} \log(N) \to \infty$$, the sum also diverges as $$N\to \infty$$.
 
 Now, instead let's consider the integral representation of the zeta function provided by
 \begin{equation}\label{eq.zeta2}
@@ -82,11 +82,11 @@ and it will converge for values obeying $$\mathrm{Re}(z) >1$$.
 
 Let us now call the right-hand side of \eqref{eq.zeta2} $$I$$ and multiply the integrand by $$e^{-t}/e^{-t}$$ and perform an expansion in powers of $$e^{-t}$$:
 $$
-I = \frac{1}{\Gamma(z)} \int\_0^\infty dt \, \frac{t^{z-1} e^{-t}}{1-e^{-t}} = \frac{1}{\Gamma(z)} \int_0^\infty dt \, \sum*{n=1}^\infty t^{z-1}e^{-nt} .
+I = \frac{1}{\Gamma(z)} \int_0^\infty dt \, \frac{t^{z-1} e^{-t}}{1-e^{-t}} = \frac{1}{\Gamma(z)} \int_0^\infty dt \, \sum_{n=1}^\infty t^{z-1}e^{-nt} .
 $$
 Now, changing the integration variable $$t\to t/n$$:
 $$
-I = \frac{1}{\Gamma(z)} \int*0^\infty \, \sum*{n=1}^\infty \left(\frac{t}{n}\right)^{z-1} e^{-t} \frac{dt}{n} = \frac{1}{\Gamma(z)} \sum\_{n=1}^\infty \frac{1}{n^z} \int_0^\infty dt \, t^{z-1} e^{-t} = \frac{\zeta(z)}{\Gamma(z)} \int_0^\infty dt \, t^{z-1} e^{-t} = \zeta(z).
+I = \frac{1}{\Gamma(z)} \int_0^\infty \, \sum_{n=1}^\infty \left(\frac{t}{n}\right)^{z-1} e^{-t} \frac{dt}{n} = \frac{1}{\Gamma(z)} \sum_{n=1}^\infty \frac{1}{n^z} \int_0^\infty dt \, t^{z-1} e^{-t} = \frac{\zeta(z)}{\Gamma(z)} \int_0^\infty dt \, t^{z-1} e^{-t} = \zeta(z).
 $$
 
 To be continued ...

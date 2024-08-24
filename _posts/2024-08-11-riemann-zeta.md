@@ -53,17 +53,23 @@ proving that
 ### Range of validity and analytic continuation
 
 We see from \eqref{eq.zeta1} converges whenever $$\mathbb{Re} z>1$$. It has a known pole at $$z=1$$:  
-\begin{equation}
-\zeta(z) = 1+\frac{1}{2}+\frac{1}{3} + \frac{1}{4}+\frac{1}{5}+\dots = \sum*{n=1}^\infty \frac{1}{n}.
-\end{equation}
+
+$$
+\zeta(z) = 1+\frac{1}{2}+\frac{1}{3} + \frac{1}{4}+\frac{1}{5}+\dots = \sum_{n=1}^\infty \frac{1}{n}.
+$$
+
 To understand how this apparently non-divergent series diverges, consider an integral instead of a sum
-\begin{equation}
+
+$$
 \int_1^N \frac{1}{x} dx = \log(N).
-\end{equation}
+$$
+
 As we know that the sum is approximately equal the integral, at least it scales equally and the difference is well-known and it is called Euler-Mascheroni constant $$\gamma$$
-\begin{equation}
-\sum*{n=1}^N \frac{1}{n} = \int*1^N \frac{1}{x} dx + \gamma = \log(N) +\gamma.
-\end{equation}
+
+$$
+\sum_{n=1}^N \frac{1}{n} = \int_1^N \frac{1}{x} dx + \gamma = \log(N) +\gamma.
+$$
+
 Therefore, as $$\log(N)$$ has no upper bound, i.e. $$\lim_{N\to \infty} \log(N) \to \infty$$, the sum also diverges as $$N\to \infty$$.
 
 Now, instead let's consider the integral representation of the zeta function provided by

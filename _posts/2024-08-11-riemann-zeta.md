@@ -72,7 +72,7 @@ Now, instead let's consider the integral representation of the zeta function pro
 \end{equation}
 where
 \begin{equation}
-\Gamma(z) = \int_0^\infty dt \, e^{-t} t^{z-1} ,
+\Gamma(z) = \int_0^\infty dt \, e^{-t} t^{z-1},
 \end{equation}
 is the gamma function. In order to realize its range of validity, we observe that the integrand at small $$t$$. The denominator approaches $$t$$, thence the integrand is $$t^{z-2}$$ at small $$t$$:
 \begin{equation}
@@ -81,10 +81,13 @@ t^{z-2} = t^{\mathrm{Re}(z) -2} t^{i \mathrm{Im}(z)},
 and it will converge for values obeying $$\mathrm{Re}(z) >1$$.
 
 Let us now call the right-hand side of \eqref{eq.zeta2} $$I$$ and multiply the integrand by $$e^{-t}/e^{-t}$$ and perform an expansion in powers of $$e^{-t}$$:
+
 $$
 I = \frac{1}{\Gamma(z)} \int_0^\infty dt \, \frac{t^{z-1} e^{-t}}{1-e^{-t}} = \frac{1}{\Gamma(z)} \int_0^\infty dt \, \sum_{n=1}^\infty t^{z-1}e^{-nt} .
 $$
+
 Now, changing the integration variable $$t\to t/n$$:
+
 $$
 I = \frac{1}{\Gamma(z)} \int_0^\infty \, \sum_{n=1}^\infty \left(\frac{t}{n}\right)^{z-1} e^{-t} \frac{dt}{n} = \frac{1}{\Gamma(z)} \sum_{n=1}^\infty \frac{1}{n^z} \int_0^\infty dt \, t^{z-1} e^{-t} = \frac{\zeta(z)}{\Gamma(z)} \int_0^\infty dt \, t^{z-1} e^{-t} = \zeta(z).
 $$

@@ -5,4 +5,5 @@ repo_description_lines_max: 2
 
 github_repos:
   - ftahas/McGuire
-  - ftahas/ftahas.github.io
+  - ftahas/ds_ml
+  - ftahas/fis_comp

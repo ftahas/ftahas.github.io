@@ -3,8 +3,8 @@ layout: post
 title: "Outreach lecture"
 date: 2024-10-10 16:11:00-0400
 description: check it out
-tags: formatting images
-categories: sample-posts
+tags: outreach lecture
+categories: CIQS
 thumbnail: assets/img/lecture1.jpg.jpg
 images:
   compare: true

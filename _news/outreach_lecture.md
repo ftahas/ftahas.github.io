@@ -12,12 +12,12 @@ as part of outreach activives within the Polonez Bis 1 project CIQS. [Lecture he
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/lecture1.jpg"}
+        {% include figure.liquid path="assets/img/lecture1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/lecture2.jpg"}
+        {% include figure.liquid path="assets/img/lecture2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
         <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/lecture3.png"}
+        {% include figure.liquid path="assets/img/lecture3.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>

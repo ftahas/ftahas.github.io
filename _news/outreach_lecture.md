@@ -2,8 +2,13 @@
 layout: post
 title: "Outreach lecture"
 date: 2024-10-10 16:11:00-0400
-inline: false
-related_posts: false
+description: check it out
+tags: formatting images
+categories: sample-posts
+thumbnail: assets/img/lecture1.jpg.jpg
+images:
+  compare: true
+  slider: true
 ---
 
 

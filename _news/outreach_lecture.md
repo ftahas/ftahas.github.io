@@ -10,14 +10,9 @@ related_posts: false
 I am happy to share that today we have visited the prestigious Montessori High School in Warsaw, where we conducted a lecture on "The fascinating realm of Quantum Mechanics and its implications" 
 as part of outreach activives within the Polonez Bis 1 project CIQS. [Lecture here](../assets/pdf/QM_lecture.pdf)
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/lecture1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/lecture2.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-        <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/lecture3.png" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/lecture1.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/lecture2.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/lecture3.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+</swiper-container>

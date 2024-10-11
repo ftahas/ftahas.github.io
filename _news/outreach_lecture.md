@@ -13,7 +13,7 @@ images:
 
 
 I am happy to share that today we have visited the prestigious Montessori High School in Warsaw, where we conducted a lecture on "The fascinating realm of Quantum Mechanics and its implications" 
-as part of outreach activives within the Polonez Bis 1 project CIQS. [Lecture here](/assets/pdf/QM_lecture.pdf)
+as part of outreach activives within the Polonez Bis 1 project CIQS. [Lecture here](https://ftahas.github.io/assets/pdf/QM_lecture.pdf)
 
 ## Abstract
 

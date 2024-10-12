@@ -99,11 +99,9 @@ I = \frac{1}{\Gamma(z)} \int_0^\infty \, \sum_{n=1}^\infty \left(\frac{t}{n}\rig
 $$
 
 
-
-
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/pdf/zeta.pdf" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/pdf/zeta.pdf" title="Riemann zeta" class="img-fluid rounded z-depth-1" %}
 </div>
 
 To be continued ...

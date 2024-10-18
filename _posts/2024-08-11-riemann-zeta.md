@@ -3,6 +3,7 @@ layout: post
 title: Riemann hypothesis
 date: 2024-08-11 11:12:00-0400
 description: Riemann zeta function and its zeros
+img: 
 tags: math
 categories: fun
 related_posts: false

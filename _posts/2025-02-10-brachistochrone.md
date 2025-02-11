@@ -36,14 +36,14 @@ where we have defined $$y':= d_x y$$.
 
 We have to vary the function $$f(y,y') = \sqrt{\frac{1+y'^2}{2gy}}$$ in order to solve the minimization problem. Thence, we apply the Euler-Lagrange condition 
 \begin{equation}
-    \del_y f(y,y') - d_x \del_{y'} f(y,y') = 0.
+    \partial_y f(y,y') - d_x \partial_{y'} f(y,y') = 0.
 \end{equation}
 Calculating both terms: 
 \begin{equation}
     \begin{aligned}
-        \del_y f(y,y') &= -\frac{1}{2} \sqrt{\frac{1+y'^2}{2g y^3}},\\
-        \del_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y',\\
-        d_x \del_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y'' - \sqrt{\frac{1}{2g y}} y' (1+y'^2)^{-3/2}y'y''-\frac{1}{2}  \sqrt{\frac{1}{(1+y'^2)2g }} y'^2 y^{-3/2}.
+        \partial_y f(y,y') &= -\frac{1}{2} \sqrt{\frac{1+y'^2}{2g y^3}},\\
+        \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y',\\
+        d_x \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y'' - \sqrt{\frac{1}{2g y}} y' (1+y'^2)^{-3/2}y'y''-\frac{1}{2}  \sqrt{\frac{1}{(1+y'^2)2g }} y'^2 y^{-3/2}.
     \end{aligned}
 \end{equation}
 Inserting them into the Euler-Lagrange equation.:
@@ -69,7 +69,7 @@ Multiplying by $$y'$$, rearranging and integrating   we get
 
 As $$f(y,y')$$ does not explicitly depend on $x$, we can use the Beltrami identity 
 \begin{equation}
-    f(y,y') - y' \del_{y'} f(y,y')  = C,
+    f(y,y') - y' \partial_{y'} f(y,y')  = C,
 \end{equation}
 where $C$ is a constant. In this fashion, we have 
 \begin{equation}

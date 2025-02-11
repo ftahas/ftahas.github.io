@@ -93,7 +93,7 @@ $$
 I = \frac{1}{\Gamma(z)} \int_0^\infty dt \, \frac{t^{z-1} e^{-t}}{1-e^{-t}} = \frac{1}{\Gamma(z)} \int_0^\infty dt \, \sum_{n=1}^\infty t^{z-1}e^{-nt} .
 $$
 
-Now, changing the integration variable $$t\to t/n$$:
+Now, changing the integration variable $$t\to t/n$$ we have that:
 
 $$
 I = \frac{1}{\Gamma(z)} \int_0^\infty \, \sum_{n=1}^\infty \left(\frac{t}{n}\right)^{z-1} e^{-t} \frac{dt}{n} = \frac{1}{\Gamma(z)} \sum_{n=1}^\infty \frac{1}{n^z} \int_0^\infty dt \, t^{z-1} e^{-t} = \frac{\zeta(z)}{\Gamma(z)} \int_0^\infty dt \, t^{z-1} e^{-t} = \zeta(z).

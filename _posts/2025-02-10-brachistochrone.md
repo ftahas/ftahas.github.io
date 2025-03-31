@@ -10,7 +10,7 @@ related_posts: false
 ---
 
 
-The Brachistochrone curve is the fastest descent from point A to point B of a body subject to a gravitational force. It comes from the Ancient Greek word  $$\textit{brákhistos khrónos}$$ (shortest time). The description of the problem is the following. Consider two points A and B on a plane with a gravitational field acting in the $$\hat{y}$$ direction. A body is released from point A and will follow curve $S$ from point A to point B due to the gravitational force. What curve minimizes the time from A to B? See figure bellow. 
+The Brachistochrone curve is the fastest descent from point A to point B of a body subject to a gravitational force. It comes from the Ancient Greek word  $$\textit{brákhistos khrónos}$$ (shortest time). The description of the problem is the following. Consider two points A and B on a plane with a gravitational field acting in the $$\hat{y}$$ direction. A body is released from point A and will follow curve S from point A to point B due to the gravitational force. What curve minimises the time from A to B? See figure bellow. 
 
 
 <div class="row justify-content-sm-center">
@@ -25,7 +25,7 @@ The time from A to B is given by
 \begin{equation}
     t_{AB}= \int_A ^B \frac{ds}{v},
 \end{equation}
-where $$ds = \sqrt{dx^2+dy^2}$$ is the arc length and $v$ is velocity. A simple application of energy conservation provides us with the velocity in terms of the gravitational acceleration $g$ and the displacement $y$:
+where $$ds = \sqrt{dx^2+dy^2}$$ is the arc length and $$v$$ is velocity. A simple application of energy conservation provides us with the velocity in terms of the gravitational acceleration $$g$$ and the displacement $$y$$:
 \begin{equation}
     \frac{1}{2}mv^2 = mgy \Longrightarrow v = \sqrt{2gy}.
 \end{equation}
@@ -56,7 +56,7 @@ Inserting them into the Euler-Lagrange equation.:
     -\frac{1}{2} \sqrt{\frac{1+y'^2}{y^3}} - \sqrt{\frac{1}{(1+y'^2) y}} y'' + \sqrt{\frac{1}{  (1+y'^2) y}}  \frac{y'^2 y''}{ (1+y'^2)}+\frac{1}{2}  \sqrt{\frac{1}{ y(1+y'^2) }} \frac{y'^2}{y} =0
 \end{equation}
 
-Multiplying the equation by $\sqrt{y(1+y'^2)}$: 
+Multiplying the equation by $$\sqrt{y(1+y'^2)}$$: 
 \begin{equation}
     -\frac{1+y'^2}{2y}  -   y'' +   \frac{y'^2 y''}{ 1+y'^2}+\frac{1}{2}     \frac{y'^2 }{y} =0 
     \Longrightarrow  -\frac{1}{2y} \left( 1+y'^2 \right) =\frac{y''}{1+y'^2} -\frac{1}{2} \frac{y'^2}{y}.
@@ -73,11 +73,11 @@ Multiplying by $$y'$$, rearranging and integrating   we get
 
 
 
-As $$f(y,y')$$ does not explicitly depend on $x$, we can use the Beltrami identity 
+As $$f(y,y')$$ does not explicitly depend on $$x$$, we can use the Beltrami identity 
 \begin{equation}
     f(y,y') - y' \partial_{y'} f(y,y')  = C,
 \end{equation}
-where $C$ is a constant. In this fashion, we have 
+where $$C$$ is a constant. In this fashion, we have 
 \begin{equation}
     \sqrt{\frac{1+y'^2}{2gy}} -\sqrt{\frac{1}{(1+y'^2)2g y}} y'^2 = C \Longrightarrow     \sqrt{\frac{1}{(1+y'^2)2g y}}   = C
 \end{equation}

@@ -10,7 +10,7 @@ related_posts: false
 ---
 
 
-The Brachistochrone curve is the fastest descent from point A to point B of a body subject to a gravitational force. It comes from the Ancient Greek word  \textit{brákhistos khrónos} (shortest time). The description of the problem is the following. Consider two points A and B on a plane with a gravitational field acting in the $$\hat{y}$$ direction. A body is released from point A and will follow curve $S$ from point A to point B due to the gravitational force. What curve minimizes the time from A to B? See figure bellow. 
+The Brachistochrone curve is the fastest descent from point A to point B of a body subject to a gravitational force. It comes from the Ancient Greek word  $$\textit{brákhistos khrónos}$$ (shortest time). The description of the problem is the following. Consider two points A and B on a plane with a gravitational field acting in the $$\hat{y}$$ direction. A body is released from point A and will follow curve $S$ from point A to point B due to the gravitational force. What curve minimizes the time from A to B? See figure bellow. 
 
 
 <div class="row justify-content-sm-center">
@@ -41,12 +41,13 @@ We have to vary the function $$f(y,y') = \sqrt{\frac{1+y'^2}{2gy}}$$ in order to
 \end{equation}
 
 Calculating both terms: 
-\begin{equation}
-    \begin{aligned}
+\begin{align}
         \partial_y f(y,y') &= -\frac{1}{2} \sqrt{\frac{1+y'^2}{2g y^3}},\\
         \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y',\\
-        d_x \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y'' - \sqrt{\frac{1}{2g y}} y' (1+y'^2)^{-3/2}y'y''-\frac{1}{2}  \sqrt{\frac{1}{(1+y'^2)2g }} y'^2 y^{-3/2}.
-    \end{aligned}
+\end{align}
+
+\begin{equation}
+d_x \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y'' - \sqrt{\frac{1}{2g y}} y' (1+y'^2)^{-3/2}y'y''-\frac{1}{2}  \sqrt{\frac{1}{(1+y'^2)2g }} y'^2 y^{-3/2}.
 \end{equation}
 
 Inserting them into the Euler-Lagrange equation.:

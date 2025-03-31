@@ -41,13 +41,14 @@ We have to vary the function $$f(y,y') = \sqrt{\frac{1+y'^2}{2gy}}$$ in order to
 \end{equation}
 
 Calculating both terms: 
-\begin{align}
-        \partial_y f(y,y') &= -\frac{1}{2} \sqrt{\frac{1+y'^2}{2g y^3}},\\
-        \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y',\\
-\end{align}
-
 \begin{equation}
-d_x \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y'' - \sqrt{\frac{1}{2g y}} y' (1+y'^2)^{-3/2}y'y''-\frac{1}{2}  \sqrt{\frac{1}{(1+y'^2)2g }} y'^2 y^{-3/2}.
+    \partial_y f(y,y') = -\frac{1}{2} \sqrt{\frac{1+y'^2}{2g y^3}},
+\end{equation}
+\begin{equation}
+    \partial_{y'} f(y,y') = \sqrt{\frac{1}{(1+y'^2)2g y}} y',
+\end{equation}
+\begin{equation}
+d_x \partial_{y'} f(y,y') = \sqrt{\frac{1}{(1+y'^2)2g y}} y'' - \sqrt{\frac{1}{2g y}} y' (1+y'^2)^{-3/2}y'y''-\frac{1}{2}  \sqrt{\frac{1}{(1+y'^2)2g }} y'^2 y^{-3/2}.
 \end{equation}
 
 Inserting them into the Euler-Lagrange equation.:

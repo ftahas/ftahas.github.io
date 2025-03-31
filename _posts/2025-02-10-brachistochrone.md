@@ -15,7 +15,7 @@ The Brachistochrone curve is the fastest descent from point A to point B of a bo
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/brachistochrone.jpg" title="Riemann zeta" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid path="assets/img/brachistochrone.jpg" title="Curve" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
@@ -39,6 +39,7 @@ We have to vary the function $$f(y,y') = \sqrt{\frac{1+y'^2}{2gy}}$$ in order to
 \begin{equation}
     \partial_y f(y,y') - d_x \partial_{y'} f(y,y') = 0.
 \end{equation}
+
 Calculating both terms: 
 \begin{equation}
     \begin{aligned}
@@ -47,10 +48,12 @@ Calculating both terms:
         d_x \partial_{y'} f(y,y') & = \sqrt{\frac{1}{(1+y'^2)2g y}} y'' - \sqrt{\frac{1}{2g y}} y' (1+y'^2)^{-3/2}y'y''-\frac{1}{2}  \sqrt{\frac{1}{(1+y'^2)2g }} y'^2 y^{-3/2}.
     \end{aligned}
 \end{equation}
+
 Inserting them into the Euler-Lagrange equation.:
 \begin{equation}
     -\frac{1}{2} \sqrt{\frac{1+y'^2}{y^3}} - \sqrt{\frac{1}{(1+y'^2) y}} y'' + \sqrt{\frac{1}{  (1+y'^2) y}}  \frac{y'^2 y''}{ (1+y'^2)}+\frac{1}{2}  \sqrt{\frac{1}{ y(1+y'^2) }} \frac{y'^2}{y} =0
 \end{equation}
+
 Multiplying the equation by $\sqrt{y(1+y'^2)}$: 
 \begin{equation}
     -\frac{1+y'^2}{2y}  -   y'' +   \frac{y'^2 y''}{ 1+y'^2}+\frac{1}{2}     \frac{y'^2 }{y} =0 

@@ -15,7 +15,8 @@ The Brachistochrone curve is the fastest descent from point A to point B of a bo
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/pdf/Brachistochrone.pdf" title="Representation of the Brachistochrone problem." class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/brachistochrone.jpg" title="Riemann zeta" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
 </div>
 
 

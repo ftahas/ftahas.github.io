@@ -78,7 +78,7 @@
       "url": "https://arxiv.org/abs/2006.13100",
       "area": "Theoretical Physics",
       "studyType": "PhD",
-      "startDate": "",
+      "startDate": " ",
       "endDate": "2020",
       "score": "10",
       "courses": ["Bose gases", "Interacing models", "Quantum many-body systems"]
@@ -100,7 +100,6 @@
       "url": "https://www.ifsc.usp.br/",
       "area": "Physics",
       "studyType": "BSc",
-      "startDate": "",
       "endDate": "2012",
       "score": "10",
       "courses": ["Quantum mechanics", "Statistical Physics"]

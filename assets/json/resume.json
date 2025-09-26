@@ -78,7 +78,7 @@
       "url": "https://arxiv.org/abs/2006.13100",
       "area": "Theoretical Physics",
       "studyType": "PhD",
-      "startDate": "2016",
+      "startDate": "",
       "endDate": "2020",
       "score": "10",
       "courses": ["Bose gases", "Interacing models", "Quantum many-body systems"]
@@ -89,7 +89,7 @@
       "url": "https://doi.org/10.11606/D.18.2015.tde-04082015-113151",
       "area": "Electrical Engineering",
       "studyType": "MSc",
-      "startDate": "2013",
+      "startDate": "",
       "endDate": "2015",
       "score": "10",
       "courses": ["Autonomous robots", "Dynamical Systems"]
@@ -100,7 +100,7 @@
       "url": "https://www.ifsc.usp.br/",
       "area": "Physics",
       "studyType": "BSc",
-      "startDate": "2007",
+      "startDate": "",
       "endDate": "2012",
       "score": "10",
       "courses": ["Quantum mechanics", "Statistical Physics"]

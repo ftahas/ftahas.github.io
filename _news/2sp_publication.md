@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New publication!"
-date: 2025-12-08 16:11:00-0400
+date: 2025-12-08 
 inline: false
 related_posts: false
 ---

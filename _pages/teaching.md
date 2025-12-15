@@ -9,6 +9,8 @@ nav_order: 6
 
 ### Courses
 
+
+- 2025 Lectures on the Riemann zeta function. [Notes here](../assets/pdf/Riemann_zeta.pdf)
 - 2023 Quantum Field Theory, Institute of Physics, Polish Academy of Sciences. [Notes here](../assets/pdf/QFT_notes.pdf)
 - 2021-2022 Statistical Physics, University of Warsaw
 - 2021-2022 Quantum Mechanics, 2021-2022, University of Warsaw

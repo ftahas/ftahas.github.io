@@ -59,7 +59,7 @@ Quantum mechanics violates \eqref{eq.CHSH} by a factor $$\sqrt{2}$$. This is the
 
 A succession of increasingly rigorous experiments confirmed the quantum prediction:
 
-| Experiment | Year | $$|S|$$ measured | Loopholes closed |
+| Experiment | Year | $$\lvert S\rvert$$ measured | Loopholes closed |
 |---|---|---|---|
 | Freedman–Clauser | 1972 | $$2.00 \pm 0.05$$ | First test |
 | Aspect et al. | 1982 | $$2.697 \pm 0.015$$ | Locality |

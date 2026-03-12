@@ -117,7 +117,7 @@ In the weak-field, slow-motion limit, the EFE reduce to Poisson's equation
 \nabla^2\Phi = 4\pi G\rho,
 \end{equation}
 
-where $$\Phi$$ is the Newtonian gravitational potential and $$g_{00} \approx -(1 + 2\Phi/c^2)$$. Newtonian gravity is thus the leading approximation to GR when both $$v/c \ll 1$$ and $$\Phi/c^2 \ll 1$.
+where $$\Phi$$ is the Newtonian gravitational potential and $$g_{00} \approx -(1 + 2\Phi/c^2)$$. Newtonian gravity is thus the leading approximation to GR when both $$v/c \ll 1$$ and $$\Phi/c^2 \ll 1$$.
 
 ### Cosmology and Friedmann equations
 

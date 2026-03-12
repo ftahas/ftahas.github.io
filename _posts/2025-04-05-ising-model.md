@@ -85,9 +85,9 @@ Near a second-order phase transition, thermodynamic quantities diverge as power 
 | Quantity | Behaviour | Exponent | MF | 2D Ising |
 |---|---|---|---|---|
 | Magnetisation | $$m \sim (-t)^\beta$$ | $$\beta$$ | $$1/2$$ | $$1/8$$ |
-| Susceptibility | $$\chi \sim \|t\|^{-\gamma}$$ | $$\gamma$$ | $$1$$ | $$7/4$$ |
-| Specific heat | $$C \sim \|t\|^{-\alpha}$$ | $$\alpha$$ | $$0$$ (disc.) | $$0$$ (log) |
-| Correlation length | $$\xi \sim \|t\|^{-\nu}$$ | $$\nu$$ | $$1/2$$ | $$1$$ |
+| Susceptibility | $$\chi \sim \lvert t\rvert^{-\gamma}$$ | $$\gamma$$ | $$1$$ | $$7/4$$ |
+| Specific heat | $$C \sim \lvert t\rvert^{-\alpha}$$ | $$\alpha$$ | $$0$$ (disc.) | $$0$$ (log) |
+| Correlation length | $$\xi \sim \lvert t\rvert^{-\nu}$$ | $$\nu$$ | $$1/2$$ | $$1$$ |
 
 These exponents are **universal**: they depend only on the dimensionality and symmetry of the order parameter, not on microscopic details (the coupling $$J$$, lattice structure, etc.). This is the content of the **universality hypothesis**, underpinned by the renormalization group.
 

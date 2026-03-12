@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Bxf7+: A Bishop Sacrifice in the Italian Game"
-date: 2026-03-12 11:00:00-0400
+date: 2026-02-13 11:00:00-0400
 description: Analysis of an attacking game featuring a classic bishop sacrifice, rook domination, and a back-rank mate
 tags: chess
 categories: fun

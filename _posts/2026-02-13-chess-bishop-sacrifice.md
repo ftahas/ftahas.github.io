@@ -206,4 +206,4 @@ The game illustrates a recurring motif in the Italian Game: once White's bishop 
 26. Re7 Qd1+ 27. Kh2 Qd4 28. Rfe5 Rf8 29. Qxg7# 1-0
 ```
 
-You can explore the game interactively on [Lichess analysis board](https://lichess.org/analysis/pgn/1.e4_e5_2.Nf3_Nc6_3.Bc4_Bc5_4.c3_Qf6_5.d4_exd4_6.O-O_Nge7_7.e5_Nxe5_8.Nxe5_Qxe5_9.Re1_Qf6_10.Nd2_dxc3_11.Ne4_Qb6_12.Bxf7+_Kxf7_13.Qf3+_Kg8_14.Nxc5_Qxc5_15.Be3_Qf5_16.Qg3_cxb2_17.Bd4_Qf7_18.Bxb2_d6_19.Re3_Bf5_20.Rae1_Ng6_21.h4_h6_22.h5_Ne5_23.Bxe5_dxe5_24.Rxe5_Qxa2_25.Rxf5_Qd2_26.Re7_Qd1+_27.Kh2_Qd4_28.Rfe5_Rf8_29.Qxg7).
+To explore the game interactively, paste the PGN above into the [Lichess analysis board](https://lichess.org/analysis).

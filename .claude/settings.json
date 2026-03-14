@@ -3,7 +3,13 @@
     "allow": [
       "WebFetch(domain:ftahas.github.io)",
       "Bash(grep -r \"mathjax\\\\|katex\\\\|math\" /home/felipe/Dropbox/Website/jekyll/Scholar/ftahas.github.io/_includes --include=*.html --include=*.liquid)",
-      "WebFetch(domain:api.github.com)"
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Read(//tmp/**)",
+      "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/quantum_computing_simulations.ipynb)",
+      "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/qft_shors_algorithm.ipynb)",
+      "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/variational_quantum_eigensolver.ipynb)",
+      "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/quantum_error_correction.ipynb)"
     ]
   }
 }

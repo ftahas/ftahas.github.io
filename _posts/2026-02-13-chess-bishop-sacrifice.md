@@ -160,16 +160,6 @@ White plays **25. Rxf5!**, capturing Black's bishop and maintaining the initiati
 ```
 *Final position after 29. Qxg7# — Black is checkmated.*
 
-The king on g8 cannot escape:
-
-- **g8→f8**: blocked by Black's own rook
-- **g8→h8**: covered by Qg7 (diagonal g7–h8)
-- **g8→h7**: covered by Qg7 and Re7 (7th rank)
-- **g8→f7**: covered by Re7 (7th rank)
-- **Qd4×Qg7**: the path d4–e5–f6–g7 is blocked by White's Re5
-
-A model checkmate: rooks controlling the 5th rank and the 7th rank seal every escape, and the queen delivers the final blow.
-
 ---
 
 ### Themes and lessons

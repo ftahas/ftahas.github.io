@@ -9,7 +9,19 @@
       "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/quantum_computing_simulations.ipynb)",
       "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/qft_shors_algorithm.ipynb)",
       "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/variational_quantum_eigensolver.ipynb)",
-      "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/quantum_error_correction.ipynb)"
+      "Bash(curl -sO https://raw.githubusercontent.com/ftahas/Quantum-Computing/main/quantum_error_correction.ipynb)",
+      "Bash(git -C /home/felipe/Dropbox/Website/jekyll/scholar/ftahas.github.io status)",
+      "Bash(git -C /home/felipe/Dropbox/Website/jekyll/scholar/ftahas.github.io log --oneline -5)",
+      "Bash(git -C /home/felipe/Dropbox/Website/jekyll/scholar/ftahas.github.io add _pages/teaching.md _posts/2026-05-10-quantum-scattering-d-dimensions.md assets/pdf/Quantum_scattering_d_dim.pdf)",
+      "Bash(git -C /home/felipe/Dropbox/Website/jekyll/scholar/ftahas.github.io commit -m ' *)",
+      "Bash(git -C /home/felipe/Dropbox/Website/jekyll/scholar/ftahas.github.io push)",
+      "Bash(git -C /home/felipe/Dropbox/Website/jekyll/scholar/ftahas.github.io commit --amend -m \"update\")",
+      "Bash(git -C /home/felipe/Dropbox/Website/jekyll/scholar/ftahas.github.io push --force)",
+      "Skill(update-config)",
+      "Skill(update-config:*)"
+    ],
+    "additionalDirectories": [
+      "/home/felipe/.claude"
     ]
   }
 }

@@ -2,7 +2,7 @@
 layout: page
 title: Quantum computing simulations with Qiskit
 date: 2026-03-13 12:00:00-0300
-description: A tour through quantum gates, entanglement, key algorithms, VQE, and error correction — all simulated on a classical computer
+description: A tour through quantum gates, entanglement, key algorithms (Grover, QPE, Shor), variational and adiabatic optimisation (VQE, QAOA, QAA), and error correction — all simulated on a classical computer
 img:
 tags: physics math quantum computing
 categories: fun
@@ -299,7 +299,167 @@ the energy landscape:
 
 ---
 
-### Quantum error correction
+### Combinatorial optimisation: QAOA and QAA
+
+A large class of NP-hard problems can be cast as the minimisation of a classical Ising
+Hamiltonian
+
+\begin{equation}\label{eq.classical_ising}
+\hat{H}_C = \sum_i h_i\,Z_i + \sum_{i<j} J_{ij}\,Z_iZ_j.
+\end{equation}
+
+The ground state of $$\hat{H}_C$$ encodes the optimal solution — but the configuration space
+has $$2^n$$ elements and the landscape is generically rugged. Two related quantum strategies
+attack this directly: the **Quantum Adiabatic Algorithm** (QAA), which slowly interpolates
+from a trivial Hamiltonian to $$\hat{H}_C$$ and rides the instantaneous ground state, and the
+**Quantum Approximate Optimization Algorithm** (QAOA), which compresses that adiabatic
+trajectory into a shallow, parameterised gate-model circuit and lets a classical optimiser
+choose the schedule. The two are intimately related: at large depth, QAOA reduces to a
+Trotterised QAA.
+
+I implement both on the same problem instance — **MaxCut on a 5-vertex graph with 6 edges** —
+so the two approaches can be compared head-to-head. Brute force gives a maximum cut of $$5$$
+edges (with the $$\mathbb{Z}_2$$-symmetric pair shown).
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-5 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/quantum_computing/qaoa_qaa_graph.png" title="MaxCut benchmark graph" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    MaxCut benchmark: 5 vertices, 6 edges. One of the four optimal bipartitions is shown
+    (red/blue), with the 5 cut edges highlighted in green.
+</div>
+
+#### QAOA
+
+For a mixer $$\hat{H}_B = \sum_i X_i$$ (whose ground state is the uniform superposition
+$$|+\rangle^{\otimes n}$$), QAOA prepares
+
+\begin{equation}\label{eq.qaoa_ansatz}
+|\psi_p(\boldsymbol\gamma,\boldsymbol\beta)\rangle = \prod_{k=1}^{p}\mathrm{e}^{-\mathrm{i}\beta_k \hat{H}_B}\,\mathrm{e}^{-\mathrm{i}\gamma_k \hat{H}_C}\,|+\rangle^{\otimes n},
+\end{equation}
+
+and a classical optimiser minimises $$\langle \hat{H}_C\rangle_{\boldsymbol\gamma,\boldsymbol\beta}$$.
+Even at $$p=1$$ the cost landscape is highly non-convex but has clear structure:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/quantum_computing/qaoa_qaa_landscape.png" title="QAOA p=1 landscape" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    QAOA \(p=1\) cost landscape over the angles \((\gamma,\beta)\). Two equivalent optima
+    appear by the symmetry \((\gamma,\beta)\to(\pi-\gamma,\pi/2-\beta)\). The global maximum
+    \(\langle C\rangle = 4.109\) (red star) gives an approximation ratio of \(0.822\) —
+    already above the FGG \(p=1\) bound of \(0.692\) for 3-regular graphs.
+</div>
+
+Scaling the depth $$p$$ rapidly closes the gap to optimum: at $$p=6$$ the expected cut is
+$$4.95$$ out of $$5$$ (approximation ratio $$0.99$$), and the measurement distribution
+concentrates almost entirely on the optimal bitstrings.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-11 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/quantum_computing/qaoa_qaa_convergence.png" title="QAOA convergence and quality vs depth" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Left: COBYLA optimisation traces (best of 10 random restarts) for \(p=1,\ldots,6\); each
+    converges to a higher cut as depth grows. Right: approximation ratio vs depth — \(0.82\)
+    at \(p=1\), monotonically improving (modulo optimiser variance) to \(0.99\) at \(p=6\).
+    The Farhi–Goldstone–Gutmann \(p=1\) bound for 3-regular graphs (red dotted) is comfortably
+    exceeded on this instance.
+</div>
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-11 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/quantum_computing/qaoa_qaa_bitstrings.png" title="QAOA output distribution" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    QAOA output distribution at \(p=3\) after optimisation: 81% of the probability mass sits on
+    the four \(\mathbb{Z}_2\)-symmetric optimal bitstrings (green). The remaining mass concentrates
+    on near-optimal cuts.
+</div>
+
+#### Quantum Adiabatic Algorithm
+
+For the QAA we evolve under a time-dependent Hamiltonian
+
+\begin{equation}\label{eq.adiabatic}
+\hat{H}(s) = (1-s)\,\hat{H}_B + s\,\hat{H}_C, \qquad s = t/T,
+\end{equation}
+
+starting in the ground state of $$\hat{H}_B$$ (which is $$|+\rangle^{\otimes n}$$). The
+adiabatic theorem guarantees that the system follows the instantaneous ground state if
+$$T \gg \max_s\|\partial_s \hat{H}\|/\Delta_{\min}^2$$, where $$\Delta_{\min}$$ is the smallest
+gap encountered along the path. Applied to the same MaxCut instance with a Trotterised
+linear schedule:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-11 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/quantum_computing/qaoa_qaa_qaa_maxcut.png" title="QAA on MaxCut vs QAOA" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Left: at \(T=30\) the overlap with the instantaneous ground state stays \(\gtrsim 0.98\)
+    along the entire anneal — well in the adiabatic regime. Right: probability of measuring
+    an optimal bitstring at \(t=T\), as a function of total annealing time \(T\) (log scale,
+    blue) compared with QAOA at fixed depth \(p\) (dashed horizontals). QAA at \(T\approx 20\)
+    matches QAOA at \(p=6\); a short anneal \(T\sim 3\) is comparable to QAOA at \(p=2\).
+</div>
+
+The figure makes the QAOA–QAA equivalence quantitative: QAOA pays its cost in classical
+optimisation over $$\boldsymbol\gamma,\boldsymbol\beta$$; QAA pays it in continuous-time depth.
+On easy instances they reach the same place.
+
+#### The adiabatic theorem in action: transverse-field Ising
+
+To isolate the physics of the adiabatic theorem, I run QAA on the cleaner toy model
+
+\begin{equation}\label{eq.tfim}
+\hat{H}_X = -\sum_{i=1}^{n} X_i, \qquad \hat{H}_{ZZ} = -\sum_{i=1}^{n-1} Z_i Z_{i+1},
+\end{equation}
+
+with $$\hat{H}(s) = (1-s)\hat{H}_X + s\hat{H}_{ZZ}$$. At $$s=0$$ the ground state is the
+paramagnet $$|+\rangle^{\otimes n}$$; at $$s=1$$ it is the doubly-degenerate ferromagnet
+$$\{|0\cdots 0\rangle, |1\cdots 1\rangle\}$$. The model has a quantum phase transition in the
+thermodynamic limit at $$s_c = 1/2$$, signalled on the finite chain by a minimum gap in the
+relevant (spin-flip-symmetric) sector:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-11 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/quantum_computing/qaoa_qaa_ising_spectrum.png" title="Ising spectrum and minimum gap" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Left: lowest eight levels of \(\hat{H}(s)\) for the \(n=6\) transverse-field Ising chain.
+    The ferromagnetic \(\mathbb{Z}_2\) partner (purple) collapses onto the ground state (blue)
+    as \(s\to 1\); the relevant excitation is to the next level (red). Right: the bare gap
+    \(E_1-E_0\) (grey) misleadingly closes to zero at \(s=1\) because of that trivial
+    degeneracy. The **relevant gap** \(E_2-E_0\) (green) reaches its minimum of \(0.69\) at
+    \(s\approx 0.54\) — the finite-chain remnant of the quantum critical point. This is the
+    gap that actually controls the QAA runtime.
+</div>
+
+The adiabatic prediction is $$T \gtrsim 1/\Delta_{\min}^2 \approx 2$$. The fidelity curve
+confirms it:
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-7 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/quantum_computing/qaoa_qaa_ising_fidelity.png" title="Adiabatic theorem in action" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Final-state fidelity with the ferromagnetic ground space vs annealing time \(T\) (log
+    scale). The fidelity crosses 0.5 around \(T\sim 3\), in line with the bound, and saturates
+    at 1. The naive \(\sin^2\) schedule (blue) actually does *worse* than the linear schedule
+    (red): it slows down at the boundaries, not in the bulk where the gap is small. Optimal
+    annealing schedules adapt their velocity to the local gap (Roland–Cerf).
+</div>
+
+
 
 Physical qubits decohere: they suffer **bit-flip** errors ($$X$$), **phase-flip** errors ($$Z$$),
 and combinations ($$Y = iXZ$$). Unlike classical bits, quantum states cannot simply be copied
@@ -339,8 +499,9 @@ algorithm on cryptographically relevant problem sizes.
 ---
 
 All simulations are available in the [Quantum-Computing](https://github.com/ftahas/Quantum-Computing)
-repository, covering these topics and more across four Jupyter notebooks:
+repository, covering these topics and more across five Jupyter notebooks:
 [`quantum_computing_simulations.ipynb`](https://github.com/ftahas/Quantum-Computing/blob/main/quantum_computing_simulations.ipynb),
 [`qft_shors_algorithm.ipynb`](https://github.com/ftahas/Quantum-Computing/blob/main/qft_shors_algorithm.ipynb),
-[`variational_quantum_eigensolver.ipynb`](https://github.com/ftahas/Quantum-Computing/blob/main/variational_quantum_eigensolver.ipynb), and
+[`variational_quantum_eigensolver.ipynb`](https://github.com/ftahas/Quantum-Computing/blob/main/variational_quantum_eigensolver.ipynb),
+[`qaoa_qaa.ipynb`](https://github.com/ftahas/Quantum-Computing/blob/main/qaoa_qaa.ipynb), and
 [`quantum_error_correction.ipynb`](https://github.com/ftahas/Quantum-Computing/blob/main/quantum_error_correction.ipynb).

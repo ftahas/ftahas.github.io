@@ -2,96 +2,136 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Felipe Taha Sant'Ana
     - name: Languages
-      value: English, German
+      value: Portuguese (Native), English (Professional Proficiency), Spanish (Intermediate), Polish (Basic)
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. in Physics
+      institution: University of São Paulo, São Carlos, Brazil
+      year: 2020
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - "Keywords: Bose gases, optical lattice, quantum phase transition, 1d interacting systems."
+        - "Thesis: A study on quantum gases: bosons in optical lattices and the one-dimensional interacting Bose gas. arXiv:2006.13100"
+    - title: M.Sc. in Electrical Engineering
+      institution: University of São Paulo, São Carlos, Brazil
+      year: 2015
       description:
-        - Description 1.
-        - Description 2.
+        - "Keywords: Autonomous robots, machine learning, computer vision."
+        - "Dissertation: Estimação de probabilidade de colisão com obstáculos móveis para navegação autônoma."
+    - title: B.Sc. in Physics
+      institution: University of São Paulo, São Carlos, Brazil
+      year: 2012
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
     - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+      institution: Federal University of ABC, Brazil
+      year: 2026 - now
+    - title: Researcher
+      institution: University of Salerno, Department of Physics, Salerno, Italy
+      year: 2024 - 2025
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+        - DFT, ML for CFT models
+    - title: Assistant Professor
+      institution: Institute of Physics, Polish Academy of Sciences, Warsaw, Poland
+      year: 2022 - 2024
       description:
+        - NCN Polonez Bis/Marie Skłodowska-Curie Fellow
+        - "Principal Investigator of the project CIQS: Correlation aspects of Interacting Quantum Systems in reduced dimensionality"
+    - title: Assistant Professor
+      institution: Faculty of Physics, University of Warsaw, Warsaw, Poland
+      year: 2020 - 2022
+      description:
+        - Postdoctoral researcher within the NCN Sonata project "Dynamic correlation functions of quantum integrable models — in and beyond the equilibrium" headed by Miłosz Panfil.
+    - title: Ph.D. Researcher
+      institution: Institut de Physique de Nice, Université Côte D'Azur, Nice, France
+      year: 2018 - 2019
+      description:
+        - Doctoral researcher under CAPES/COFECUB bilateral collaboration.
+    - title: Ph.D. Researcher
+      institution: São Carlos Institute of Physics, University of São Paulo, São Carlos, Brazil
+      year: 2016 - 2020
+      description:
+        - Doctoral researcher within the project "Bose gases in optical lattices" headed by F.E.A. dos Santos.
+    - title: Quantitative Analyst
+      institution: Luz Financial Solutions, São Carlos, Brazil
+      year: 2015
+      description:
+        - Applied advanced mathematical techniques for data science and financial modeling to investigate and tackle market and credit analysis.
+    - title: M.Sc. Researcher
+      institution: São Carlos School of Engineering, University of São Paulo, São Carlos, Brazil
+      year: 2013 - 2015
+      description:
+        - Master student within the project "Dynamic environments in autonomous robotics" headed by Valdir Grassi Jr.
+    - title: AI Developer
+      institution: Warthog Robotics, São Carlos, Brazil
+      year: 2012 - 2015
+      description:
+        - Developed machine learning algorithms for autonomous robotics.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
+- title: Grants
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: "CIQS: Correlation aspects of Interacting Quantum Systems in reduced dimensionality"
+      year: Nov 2022 - Oct 2024
+      description:
+        - "Keywords: Quantum Field Theories, Integrable models, 1d interacting systems."
+        - Project No. 2021/43/P/ST2/02904 co-funded by the National Science Centre and the European Union Framework Programme for Research and Innovation Horizon 2020 under the Marie Skłodowska-Curie grant agreement no. 945339.
 
-- title: Honors and Awards
+- title: Teaching
   type: time_table
   contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
+    - title: Quantum theory of scattering by a central potential
+      institution: Lecture notes
+      year: 2026
+    - title: Lecture notes on the Riemann zeta function
+      institution: Lecture notes
+      year: 2025
+    - title: Quantum Field Theory
+      institution: Institute of Physics, Polish Academy of Sciences, Warsaw, Poland
+      year: 2023 - 2024
+    - title: Statistical Physics
+      institution: Faculty of Physics, University of Warsaw, Warsaw, Poland
+      year: 2021 - 2022
+    - title: Quantum Mechanics
+      institution: Faculty of Physics, University of Warsaw, Warsaw, Poland
+      year: 2021 - 2022
+    - title: Computational Physics
+      institution: São Carlos Institute of Physics, University of São Paulo, São Carlos, Brazil
+      year: 2017
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Theoretical Physics
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Interacting quantum systems
+        - Integrable models
+        - Quantum field theories
+        - Mathematical physics
+        - Complex systems
+    - title: AI & Robotics
       items:
-        - Description 1.
-        - Description 2.
+        - Machine learning
+        - Computer vision
+        - Autonomous robots
 
-- title: Other Interests
-  type: list
+- title: Skills
+  type: nested_list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - title: Programming Languages
+      items:
+        - Fortran, C, C++, Python, HTML, Julia, R
+    - title: Systems and Software
+      items:
+        - Linux, LaTeX, Mathematica, MatLab, JupyterLab, ROS
+    - title: Specialized Areas
+      items:
+        - Quantitative analysis, Data Science, Machine Learning, Computer Vision, Financial Market
+    - title: Research Skills
+      items:
+        - Quantum Systems, Quantum Field Theory, AMO Physics, Integrability, AI, Autonomous Robots

@@ -2,25 +2,48 @@
 layout: page
 permalink: /teaching/fuv/
 title: FUV — Funções de uma Variável
-description: BCN0402-15, Bacharelado em Ciência e Tecnologia, UFABC — Q3 2026
+description: BCN0402-15, Bacharelado em Ciência e Tecnologia, UFABC — 2026.3
 nav: false
 ---
 
-### About the course
+### Sobre a disciplina
 
-Course on functions of one real variable, covering the core tools of differential and integral calculus: derivatives, geometric interpretation, curve sketching, optimization, L'Hôpital's rule, Taylor's formula, the definite integral, the Fundamental Theorem of Calculus, integration techniques, and applications to areas, volumes, and accumulated quantities.
+Sistematização da noção de função de uma variável real e desenvolvimento dos conceitos centrais do cálculo diferencial e integral, com ênfase em derivadas, integrais, interpretação geométrica, modelagem e resolução de problemas.
 
-- **Código:** BCN0402-15
+- **Código da disciplina:** BCN0402-15
+- **TPEI:** 4-0-0-6
+- **Recomendação:** Bases Matemáticas
 - **Docente:** Felipe Sant'Ana
-- **Período:** Q3 2026
+- **Período letivo:** 2026.3
+- **Carga horária:** 48 horas
+- **Sala:** A1-S203-SB
 - **Instituição:** Universidade Federal do ABC (UFABC)
+
+Plano de ensino completo, com objetivos, metodologia, critérios de avaliação e cronograma detalhado: [Plano de Ensino (PDF)](../../assets/pdf/fuv/plano_ensino_fuv.pdf).
 
 ### Ementa
 
-Derivadas — interpretação geométrica e taxa de variação, regras de derivação, derivadas de ordem superior, diferencial, taxas relacionadas, máximos e mínimos, análise de crescimento/decrescimento e concavidade, construção de gráficos, regra de L'Hôpital, fórmula de Taylor. Integral definida — interpretação geométrica, propriedades, antiderivadas, Teorema Fundamental do Cálculo, técnicas de primitivação (substituição, partes, frações parciais, integrais trigonométricas), aplicações ao cálculo de áreas e volumes.
+Derivadas. Interpretação geométrica e taxa de variação. Regras de derivação. Derivadas de funções elementares. Derivadas de ordem superior. Diferencial da função de uma variável. Aplicações de derivadas. Fórmula de Taylor. Máximos e mínimos absolutos e relativos. Análise do comportamento de funções através de derivadas. Regra de L'Hôpital. Crescimento, decrescimento e concavidade. Construções de gráficos. Integral definida. Interpretação geométrica. Propriedades. Antiderivada e integral indefinida. Teorema Fundamental do Cálculo. Aplicações da integral definida. Técnicas de primitivação: técnicas elementares, mudança de variáveis, integração por partes, integração de funções racionais por frações parciais e integrais trigonométricas. Aplicações ao cálculo de áreas e volumes.
 
-### Lecture notes and materials
+### Avaliação
 
-<!-- Add entries below as materials become available, e.g.:
-- [Lecture 1 — Derivative: meaning and definition](../../assets/pdf/fuv/lecture1.pdf)
+- **Prova 1 (P1):** 21/10/2026
+- **Prova 2 (P2):** 04/12/2026
+- **Vista de prova / prova substitutiva:** 09/12/2026
+- **Prova de recuperação:** 11/12/2026
+
+### Atendimento docente
+
+Quarta-feira, das 10h às 11h; sexta-feira, das 12h às 13h.
+
+### Bibliografia
+
+1. ANTON, H. *Cálculo: um novo horizonte*. v. I. Porto Alegre: Bookman, 2000.
+2. GUIDORIZZI, H. L. *Um curso de cálculo*. v. I. Rio de Janeiro: LTC, 2018.
+3. STEWART, J. *Cálculo*. v. I. São Paulo: Cengage Learning, 2017.
+
+### Notas de aula e materiais
+
+<!-- Adicione abaixo os materiais conforme forem ficando disponíveis, por exemplo:
+- [Aula 1 — Derivadas: interpretação geométrica e taxa de variação](../../assets/pdf/fuv/aula1.pdf)
 -->

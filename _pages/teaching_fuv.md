@@ -36,6 +36,10 @@ Derivadas. Interpretação geométrica e taxa de variação. Regras de derivaç�
 
 Quarta-feira, das 10h às 11h; sexta-feira, das 12h às 13h.
 
+### Monitoria
+
+Horários de monitoria: [tinyurl.com/monitoriabmfuvq32026](https://tinyurl.com/monitoriabmfuvq32026).
+
 ### Bibliografia
 
 1. ANTON, H. *Cálculo: um novo horizonte*. v. I. Porto Alegre: Bookman, 2000.

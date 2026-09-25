@@ -40,6 +40,10 @@ Quarta-feira, das 10h às 11h; sexta-feira, das 12h às 13h.
 
 Horários de monitoria: [tinyurl.com/monitoriabmfuvq32026](https://tinyurl.com/monitoriabmfuvq32026).
 
+### Listas de exercícios
+
+Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br — Funções de uma Variável](https://cursos.ufabc.edu.br/bacharelado-em-matematica/inicio/247-bacharelado-em-matematica/disciplinas/9361-funcoes-de-uma-variavel).
+
 ### Bibliografia
 
 1. ANTON, H. *Cálculo: um novo horizonte*. v. I. Porto Alegre: Bookman, 2000.

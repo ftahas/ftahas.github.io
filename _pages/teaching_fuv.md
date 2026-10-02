@@ -44,6 +44,8 @@ Horários de monitoria: [tinyurl.com/monitoriabmfuvq32026](https://tinyurl.com/m
 
 Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br — Funções de uma Variável](https://cursos.ufabc.edu.br/bacharelado-em-matematica/inicio/247-bacharelado-em-matematica/disciplinas/9361-funcoes-de-uma-variavel).
 
+- [Lista de Exercícios 1](../../assets/pdf/fuv/lista01.pdf)
+
 ### Bibliografia
 
 1. ANTON, H. *Cálculo: um novo horizonte*. v. I. Porto Alegre: Bookman, 2000.

@@ -51,3 +51,11 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 1. ANTON, H. *Cálculo: um novo horizonte*. v. I. Porto Alegre: Bookman, 2000.
 2. GUIDORIZZI, H. L. *Um curso de cálculo*. v. I. Rio de Janeiro: LTC, 2018.
 3. STEWART, J. *Cálculo*. v. I. São Paulo: Cengage Learning, 2017.
+
+### Notas de aula
+
+- [Aula 1 — Derivadas](../../assets/pdf/fuv/aula01.pdf) (16/09/2026)
+- [Aula 2 — Regras de derivação](../../assets/pdf/fuv/aula02.pdf) (18/09/2026)
+- [Aula 3 — Funções trigonométricas e regra da cadeia](../../assets/pdf/fuv/aula03.pdf) (25/09/2026)
+- [Aula 4 — Derivação implícita e funções elementares](../../assets/pdf/fuv/aula04.pdf) (30/09/2026)
+- [Aula 5 — Taxas relacionadas e aproximação linear](../../assets/pdf/fuv/aula05.pdf) (02/10/2026)

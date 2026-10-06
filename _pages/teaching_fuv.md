@@ -51,9 +51,3 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 1. ANTON, H. *Cálculo: um novo horizonte*. v. I. Porto Alegre: Bookman, 2000.
 2. GUIDORIZZI, H. L. *Um curso de cálculo*. v. I. Rio de Janeiro: LTC, 2018.
 3. STEWART, J. *Cálculo*. v. I. São Paulo: Cengage Learning, 2017.
-
-### Notas de aula e materiais
-
-<!-- Adicione abaixo os materiais conforme forem ficando disponíveis, por exemplo:
-- [Aula 1 — Derivadas: interpretação geométrica e taxa de variação](../../assets/pdf/fuv/aula1.pdf)
--->

@@ -58,4 +58,4 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 2 — Regras de derivação](../../assets/pdf/fuv/aula02.pdf) (18/09/2026)
 - [Aula 3 — Funções trigonométricas e regra da cadeia](../../assets/pdf/fuv/aula03.pdf) (25/09/2026)
 - [Aula 4 — Derivação implícita e funções elementares](../../assets/pdf/fuv/aula04.pdf) (30/09/2026)
-- [Aula 5 — Taxas relacionadas e aproximação linear](../../assets/pdf/fuv/aula05.pdf) (02/10/2026)
+- [Aula 5 — Taxas de variação e taxas relacionadas](../../assets/pdf/fuv/aula05.pdf) (02/10/2026)

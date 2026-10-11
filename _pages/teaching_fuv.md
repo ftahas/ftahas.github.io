@@ -45,6 +45,7 @@ Horários de monitoria: [tinyurl.com/monitoriabmfuvq32026](https://tinyurl.com/m
 Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br — Funções de uma Variável](https://cursos.ufabc.edu.br/bacharelado-em-matematica/inicio/247-bacharelado-em-matematica/disciplinas/9361-funcoes-de-uma-variavel).
 
 - [Lista de Exercícios 1](../../assets/pdf/fuv/lista01.pdf)
+- [Lista de Exercícios 2](../../assets/pdf/fuv/lista02.pdf)
 
 ### Bibliografia
 
@@ -59,3 +60,4 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 3 — Funções trigonométricas e regra da cadeia](../../assets/pdf/fuv/aula03.pdf) (25/09/2026)
 - [Aula 4 — Derivação implícita e funções elementares](../../assets/pdf/fuv/aula04.pdf) (30/09/2026)
 - [Aula 5 — Taxas de variação e taxas relacionadas](../../assets/pdf/fuv/aula05.pdf) (02/10/2026)
+- [Aula 6 — Linearização e extremos](../../assets/pdf/fuv/aula06.pdf) (07/10/2026)

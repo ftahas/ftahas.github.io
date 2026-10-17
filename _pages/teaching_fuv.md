@@ -64,3 +64,5 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 6 — Linearização e extremos](../../assets/pdf/fuv/aula06.pdf) (07/10/2026)
 - [Aula 7 — Como as derivadas afetam a forma de um gráfico](../../assets/pdf/fuv/aula07.pdf) (14/10/2026)
 - [Aula 8 — Regra de l'Hôspital e polinômios de Taylor](../../assets/pdf/fuv/aula08.pdf) (16/10/2026)
+
+*No evil stands time. As the pendulum swings, the sinful become sinless*

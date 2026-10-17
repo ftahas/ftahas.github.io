@@ -66,3 +66,5 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 8 — Regra de l'Hôspital e polinômios de Taylor](../../assets/pdf/fuv/aula08.pdf) (16/10/2026)
 
 *No evil stands time. As the pendulum swings, the sinful become sinless*
+
+*Euler needed a tailor. Naturally, he logged into his computer.*

@@ -46,6 +46,7 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 
 - [Lista de Exercícios 1](../../assets/pdf/fuv/lista01.pdf)
 - [Lista de Exercícios 2](../../assets/pdf/fuv/lista02.pdf)
+- [Lista de Exercícios 3](../../assets/pdf/fuv/lista03.pdf)
 
 ### Bibliografia
 
@@ -61,3 +62,5 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 4 — Derivação implícita e funções elementares](../../assets/pdf/fuv/aula04.pdf) (30/09/2026)
 - [Aula 5 — Taxas de variação e taxas relacionadas](../../assets/pdf/fuv/aula05.pdf) (02/10/2026)
 - [Aula 6 — Linearização e extremos](../../assets/pdf/fuv/aula06.pdf) (07/10/2026)
+- [Aula 7 — Como as derivadas afetam a forma de um gráfico](../../assets/pdf/fuv/aula07.pdf) (14/10/2026)
+- [Aula 8 — Regra de l'Hôspital e polinômios de Taylor](../../assets/pdf/fuv/aula08.pdf) (16/10/2026)

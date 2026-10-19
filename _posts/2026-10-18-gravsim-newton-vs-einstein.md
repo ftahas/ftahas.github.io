@@ -108,27 +108,175 @@ is left as a straight line.
     two runs. The slope is 42.98 ± 0.001 arcseconds per century.
 </div>
 
-### Einstein: the first post-Newtonian correction
+### From Einstein's equations to the 43 arcseconds
 
-In the weak-field, slow-motion limit General Relativity adds to the Newtonian acceleration of a
-test body around a mass $$M$$ a term of relative size $$v^2/c^2 \sim GM/(c^2 r) \sim 10^{-8}$$ for
-Mercury. In harmonic coordinates, and with the parametrised post-Newtonian (PPN) parameters
-$$\beta$$ and $$\gamma$$ left explicit,
+Before the force law that the code integrates, here is where that law comes from, because the
+whole point of the project is that the number is *derived*, not fitted. The chain is: field
+equations → the metric outside the Sun → the geodesic equation → an orbit equation that is
+Newton's plus one term → the precession.
+
+**The field equations.** General Relativity replaces the gravitational potential by the metric
+$$g_{\mu\nu}$$ of spacetime and Poisson's equation by Einstein's field equations,
+
+\begin{equation}\label{eq.efe}
+R_{\mu\nu} - \tfrac{1}{2} R\, g_{\mu\nu} = \frac{8\pi G}{c^4}\, T_{\mu\nu},
+\end{equation}
+
+where the Ricci tensor $$R_{\mu\nu}$$ and the scalar $$R = g^{\mu\nu}R_{\mu\nu}$$ are built from
+second derivatives of the metric, and $$T_{\mu\nu}$$ is the energy–momentum of matter. Outside the
+Sun $$T_{\mu\nu} = 0$$, and taking the trace of \eqref{eq.efe} gives $$R = 0$$, so the vacuum
+equations are simply $$R_{\mu\nu} = 0$$: ten coupled nonlinear partial differential equations for
+the ten components of $$g_{\mu\nu}$$. Matter still enters, through the boundary condition that
+far from the Sun the field must reduce to Newton's: comparing the geodesic equation below with
+Newton's second law in the weak-field, slow-motion limit forces
+$$g_{00} \to -(1 + 2\Phi/c^2)$$ with $$\Phi = -GM/r$$. That identification is also what fixes
+the constant $$8\pi G/c^4$$ in front of $$T_{\mu\nu}$$.
+
+**The Schwarzschild solution.** For a static, spherically symmetric source the vacuum equations
+have a unique solution, found by Karl Schwarzschild within weeks of Einstein's paper
+(and, by Birkhoff's theorem, the only one even if the star pulsates radially):
+
+\begin{equation}\label{eq.schw}
+ds^2 = -\left(1-\frac{r_s}{r}\right)c^2\,dt^2 + \left(1-\frac{r_s}{r}\right)^{-1} dr^2 + r^2\left(d\theta^2 + \sin^2\theta\, d\phi^2\right),
+\qquad r_s = \frac{2GM}{c^2}.
+\end{equation}
+
+For the Sun $$r_s = 2.95$$ km, and at Mercury's orbit $$r_s/r \approx 5\times10^{-8}$$. That ratio
+is the size of everything relativistic in the inner solar system, and it is why the effect took
+until 1859 to notice and until 1915 to explain.
+
+**Geodesics.** A planet is a test body, so it follows a geodesic of \eqref{eq.schw}: it
+extremises the proper time $$\tau$$ along its path. The equations of motion come from the
+Lagrangian $$\mathcal{L} = \tfrac{1}{2} g_{\mu\nu}\dot{x}^\mu \dot{x}^\nu$$ with
+$$\dot{\ } = d/d\tau$$. Two coordinates are cyclic, so two quantities are conserved along the
+orbit, and spherical symmetry lets us put the orbit in the plane $$\theta = \pi/2$$:
+
+\begin{equation}\label{eq.geo}
+E = \left(1-\frac{r_s}{r}\right) c^2\, \dot t, \qquad L = r^2 \dot\phi .
+\end{equation}
+
+$$E$$ is the energy per unit mass including rest energy, $$L$$ the angular momentum per unit mass:
+Kepler's second law survives intact, only with proper time as the clock. The third equation is
+the normalisation $$g_{\mu\nu}\dot x^\mu \dot x^\nu = -c^2$$ of the four-velocity, which with
+\eqref{eq.geo} becomes a radial energy equation,
+
+\begin{equation}\label{eq.veff}
+\tfrac{1}{2}\dot r^2 + V_{\rm eff}(r) = \frac{E^2 - c^4}{2c^2},
+\qquad
+V_{\rm eff}(r) = -\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GM L^2}{c^2 r^3}.
+\end{equation}
+
+This is the whole of planetary motion in one line. The first two terms of $$V_{\rm eff}$$ are
+exactly Newton's effective potential, gravity plus the centrifugal barrier; the third is the
+relativistic correction. It is attractive, it falls off as $$1/r^3$$, and near a compact mass it
+overwhelms the centrifugal barrier, which is where the innermost stable circular orbit and the
+photon sphere come from (more on that below). Near the Sun it is a whisper: at Mercury's orbit
+it is $$10^{-8}$$ of the Newtonian term. The simulation integrates \eqref{eq.veff} as it stands in
+the "exact Schwarzschild" mode.
+
+**The orbit equation.** Follow Binet: use $$u = 1/r$$ as the variable and $$\phi$$ as the
+parameter. From \eqref{eq.geo}, $$\dot r = -L\, du/d\phi$$, so \eqref{eq.veff} becomes a first-order
+equation in $$u(\phi)$$; differentiating it once with respect to $$\phi$$ gives
+
+\begin{equation}\label{eq.binet}
+\frac{d^2 u}{d\phi^2} + u = \frac{GM}{L^2} + \frac{3GM}{c^2}\, u^2 .
+\end{equation}
+
+Without the last term this is Newton's orbit equation, whose solution is the conic
+$$u_0(\phi) = \frac{GM}{L^2}\left(1 + e\cos\phi\right)$$: a closed ellipse with the perihelion
+fixed at $$\phi = 0$$ forever. The last term is all that General Relativity adds to the shape of
+a planetary orbit, and it is small: writing it in terms of the Newtonian solution,
+
+\begin{equation}\label{eq.epsilon}
+\frac{3GM}{c^2}u_0^2 = \epsilon\,\frac{GM}{L^2}\left(1 + e\cos\phi\right)^2,
+\qquad
+\epsilon \equiv \frac{3\,(GM)^2}{c^2 L^2} = \frac{3GM}{c^2 a(1-e^2)} \approx 8\times10^{-8}
+\end{equation}
+
+for Mercury, where $$L^2 = GM a(1-e^2)$$ relates the angular momentum to the osculating ellipse.
+
+**Perturbation theory.** Write $$u = u_0 + u_1$$ with $$u_1 = O(\epsilon)$$ and keep first
+order. The correction obeys a driven harmonic oscillator,
+
+\begin{equation}\label{eq.pert}
+\frac{d^2 u_1}{d\phi^2} + u_1 = \epsilon\,\frac{GM}{L^2}\left(1 + 2e\cos\phi + e^2\cos^2\phi\right).
+\end{equation}
+
+The constant and the $$\cos^2\phi = \tfrac12(1+\cos 2\phi)$$ pieces on the right drive bounded,
+periodic responses: they distort the ellipse by one part in $$10^{7}$$ and nothing accumulates.
+The $$2e\cos\phi$$ piece is different: it drives the oscillator *at its own frequency*, which is
+resonance, and the response grows without bound,
+
+\begin{equation}\label{eq.secular}
+u_1^{\rm (sec)} = \epsilon\,\frac{GM}{L^2}\; e\,\phi \sin\phi .
+\end{equation}
+
+Add it to $$u_0$$ and use $$\cos\phi + \epsilon\phi\sin\phi \approx \cos\big[(1-\epsilon)\phi\big]$$,
+valid as long as $$\epsilon\phi \ll 1$$, that is for many thousands of orbits:
+
+\begin{equation}\label{eq.orbit}
+u(\phi) \approx \frac{GM}{L^2}\Big\{1 + e\cos\big[(1-\epsilon)\phi\big]\Big\}.
+\end{equation}
+
+The orbit is still an ellipse to this accuracy, but the angle has been rescaled: $$r$$ returns
+to its minimum not after $$\phi = 2\pi$$ but after $$(1-\epsilon)\phi = 2\pi$$, so each
+perihelion arrives $$2\pi/(1-\epsilon) - 2\pi \approx 2\pi\epsilon$$ later in angle than the last.
+The ellipse turns, in the direction of motion, by
+
+\begin{equation}\label{eq.advance}
+\Delta\phi = 2\pi\epsilon = \frac{6\pi\,(GM)^2}{c^2 L^2} = \frac{6\pi G M}{c^2\, a\,(1-e^2)}
+\end{equation}
+
+per revolution. This is the formula Einstein wrote down on 18 November 1915. It depends on the
+orbit only through $$a(1-e^2)$$, the semi-latus rectum, which is why Mercury, the closest and most
+eccentric planet, is the one that shows it.
+
+**The number.** For the Sun $$GM/c^2 = 1.4766$$ km; for Mercury $$a = 5.791\times10^{7}$$ km and
+$$e = 0.2056$$, so $$a(1-e^2) = 5.546\times10^{7}$$ km and
+
+\begin{equation}\label{eq.number}
+\Delta\phi = 6\pi \times \frac{1.4766}{5.546\times10^{7}} = 5.02\times10^{-7}\ {\rm rad} = 0.1035''
+\end{equation}
+
+per orbit. Mercury completes $$36525/87.969 = 415.2$$ orbits per Julian century, which gives
+$$42.98''$$ per century, Le Verrier's missing piece to two decimal places. The perturbative
+treatment is accurate to relative order $$\epsilon$$ itself; the exact Schwarzschild advance,
+which gravsim computes by integrating \eqref{eq.binet} numerically, differs from
+\eqref{eq.advance} by $$10^{-4}$$ arcseconds per century, as the lesson on black-hole orbits checks.
+
+**Where the force law comes from.** The N-body code cannot integrate a metric per body; it needs
+an acceleration. Expanding the geodesic equation of a nearly-Newtonian metric in powers of
+$$1/c^2$$ (the *post-Newtonian* expansion) gives the Newtonian acceleration plus a correction of
+relative size $$v^2/c^2$$; the result in harmonic coordinates is equation \eqref{eq.pn1} below.
+It contains the same physics as \eqref{eq.binet}, and indeed averaging it over a Kepler ellipse
+reproduces \eqref{eq.advance} exactly. For several massive bodies the same expansion applied to
+the full field equations, keeping every body as a source, gives the Einstein–Infeld–Hoffmann
+equations that the ephemerides use.
+
+### Einstein in the N-body code: the first post-Newtonian correction
+
+In the weak-field, slow-motion limit the geodesic equation reduces to Newton's second law with
+the Newtonian acceleration plus a correction of relative size
+$$v^2/c^2 \sim GM/(c^2 r) \sim 10^{-8}$$ for Mercury. In harmonic coordinates, and with the
+parametrised post-Newtonian (PPN) parameters $$\beta$$ and $$\gamma$$ left explicit (they measure,
+respectively, the nonlinearity of gravity and the spatial curvature per unit mass; General
+Relativity has $$\beta = \gamma = 1$$),
 
 \begin{equation}\label{eq.pn1}
 \mathbf{a}_{1\mathrm{PN}} = \frac{GM}{c^2 r^3}\left[\left(2(\beta+\gamma)\frac{GM}{r} - \gamma v^2\right)\mathbf{r} + 2(1+\gamma)(\mathbf{r}\cdot\mathbf{v})\,\mathbf{v}\right],
 \end{equation}
 
 which for GR ($$\beta=\gamma=1$$) is the familiar $$(4GM/r - v^2)\,\mathbf{r} + 4(\mathbf{r}\cdot\mathbf{v})\,\mathbf{v}$$.
-Averaged over an orbit this force turns the ellipse by
+Averaged over an orbit (Gauss's perturbation equations do the bookkeeping) this force turns the
+ellipse by the PPN generalisation of \eqref{eq.advance},
 
 \begin{equation}\label{eq.precession}
 \Delta\varpi = \frac{2+2\gamma-\beta}{3}\,\frac{6\pi GM}{c^2 a(1-e^2)}
 \end{equation}
 
-per revolution. For Mercury ($$a = 0.387$$ au, $$e = 0.206$$, 415 orbits per century) the GR value
-is $$5.02\times10^{-7}$$ rad per orbit, that is 42.98" per century; the simulation measures
-42.98 ± 0.001. The same force applied to all planets gives 8.64" for Venus, 3.85" for the Earth and
+per revolution. For Mercury the GR value is the 42.98" per century of \eqref{eq.number}; the
+simulation, which knows nothing of the derivation above and only integrates \eqref{eq.pn1},
+measures 42.98 ± 0.001. The same force applied to all planets gives 8.64" for Venus, 3.85" for the Earth and
 1.35" for Mars (predicted 8.62, 3.84, 1.35), and plotting the measured advance per orbit against
 $$a(1-e^2)$$ puts every planet on the $$1/(a(1-e^2))$$ line of equation \eqref{eq.precession}.
 
@@ -218,14 +366,9 @@ the Cassini measurement $$\gamma - 1 = (2.1\pm2.3)\times10^{-5}$$ that pins thin
 
 The 1PN term is the first order of an expansion in $$GM/(c^2 r)$$, superb around the Sun
 ($$10^{-8}$$) and useless near a black hole. gravsim also integrates the exact timelike and null
-geodesics of the Schwarzschild metric. Everything follows from the effective potential per unit
-mass,
-
-\begin{equation}\label{eq.veff}
-V_{\rm eff}(r) = -\frac{GM}{r} + \frac{L^2}{2r^2} - \frac{GM L^2}{c^2 r^3},
-\end{equation}
-
-whose last term is the relativistic correction: it creates the innermost stable circular orbit at
+geodesics of the Schwarzschild metric, that is, equations \eqref{eq.geo} and \eqref{eq.veff}
+without any expansion. Everything follows from the effective potential of \eqref{eq.veff}, whose
+$$-GML^2/(c^2 r^3)$$ term, a whisper at Mercury, becomes dominant at small $$r$$: it creates the innermost stable circular orbit at
 $$6GM/c^2$$, the photon sphere at $$3GM/c^2$$, and orbits that whirl many times near periapsis before
 zooming back out. For Mercury the exact geodesic advance agrees with the 1PN formula to
 $$10^{-4}$$ arcseconds per century, which is the measure of how good the expansion is.

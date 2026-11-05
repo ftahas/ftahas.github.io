@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Part 4: Putting the blocks together</title>
+<link href="index_assets/reveal.css" rel="stylesheet"/>
+<link href="index_assets/black.css" rel="stylesheet"/>
+<!-- Theme used for syntax highlighting of code -->
+<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+<link href="index_assets/zenburn.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s00_842dc247d1dcc836.mp4" data-background-video-muted="">
+<aside class="notes" data-markdown="">Welcome to the last part: the paper's Fig. 2(a) (paper: fig_asym_n, panel (a); Delta_z = 0.3, gamma = 0.2); by the end of the hour you will read every mark on it, and you already own every block. From Part 2 the Bell (1/2 log(4 pi V)) and the Dial (offsets log n/(2(n-1))); from Part 3 the yellow line chi_zz, a variance per site; Baxter's machine, couplings in, exact inverse length M out; the two lightest particles, a pair of walls and the pink rung; the train of small tables the computer uses. One job: put the six blocks together and check against the computer three times. Route card: three ingredients, three tests, then the error bar, the bell for real, the knob, the finale; it docks top right.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s01_1108ef8041dc0b0a.mp4">
+<aside class="notes" data-markdown="">Part 3 left a question: the Clock's bump has a width V, the charge Bell has a variance; for a pure window they agreed. Vote: for a mixed window, is the Clock's width V equal to the variance of the charge Bell? Yes, always | Only when the window is pure | Never for a mixed window. Expected split between the first two; the napkin answers the second, the chain the third softened.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s01_bca41e4cbda5889f.mp4">
+<aside class="notes" data-markdown="">Reveal: two gauges, V (the Clock's width) and Var(Q_A) (the Bell's variance): a pure pair of spins reads 0.2264 on both; a mixed pair 0.272 against 0.409 (talknum, two-spin toy states, seed 0). Eq. (V): V weighs each pair of eigenvectors of the table by |<a|q_a|b>|^2, times (p_a - p_b)^2; for a pure window every difference is 1 or 0 and V is the variance; mix the window and the weights shrink: on a napkin the second option wins. On the chain (V_var_exhibit.json, Delta_z = 0.3, gamma = 0.2) both widths are straight lines in ell with the same slope 0.0553 = chi_zz/2 and a constant gap 0.07 (0.0746 at ell = 4 to 0.0698 at 64); zoomed out to ell = 1000 the gap is invisible: V = Var(Q_A)[1 + O(1/ell)]. So 'never' was right, by a constant that never grows. Why: chunks longer than 1/M = 9.2 sites are independent, logs add, both widths grow by the same amount per chunk, only the edges differ. Black box: transfer matrix ('logs add'), App. A, taken on faith.</a|q_a|b></aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s02_ca92ff1241d762cb.mp4">
+<aside class="notes" data-markdown="">Assemble: the Bell, Delta S^(2)_A = 1/2 log(4 pi V), V = ?; V is the variance up to the edges (4.2) and the variance is 1/2 chi_zz ell (3.11), so 4 pi V = 2 pi ell chi_zz. Split the two off: 1/2 log(pi ell chi_zz) + 1/2 log 2, and 1/2 log 2 = 0.3466 is the Dial's n = 2 offset (closed form); turning the Dial gives log n/(2(n-1)): 0.5 at n -&gt; 1, 0.2747 at 3, 0.2012 at 5. The edges cost O(1/(M ell)), with 1/M = 9.2 sites at Delta_z = 0.3, gamma = 0.2 (paper: jkm_exact.py). The master formula in three colours, nothing fitted; on faith: 'logs add' and the n -&gt; 1 continuation (Black-box card).</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s03_39a6454d3fe73b03.mp4">
+<aside class="notes" data-markdown="">Test 1, the paper's Fig. 2(a) rebuilt from the data (Delta_z = 0.3, gamma = 0.2): open markers are windows of up to twelve spins with their tables built from the charge drawers of Part 2 (shape = n: circle 2, diamond 3, triangle-down 5, triangle-up n -&gt; 1); filled squares are windows of 16 to 64 where the computer ran the Clock on the infinite chain. The master formula's lines (slope 1/2 on the log axis, intercept from the variance per site chi_zz = 0.110552 and the Dial, nothing fitted) for n = 2, 3, 5 and n -&gt; 1: four parallel lines, the points fall onto them. Headline: the gap between the n = 2 and n = 3 lines is 1/2 log 2 - 1/4 log 3 = 0.0719 (closed form); measured on the same state the gap lands within three percent (0.0739 and 0.0724 by the two extrapolations, 0.0727-0.0738 per row). The small windows sit a little above their lines; that excess delta_n against 1/(M ell), M = 0.10836 (jkm_exact.py), falls on one trend into the origin for small and large windows (inset: n = 2 and n -&gt; 1, whose tail is about 2.3 times smaller; the paper's inset also shows n = 3 and 5, on top of n = 2): the small-window gap is the white tail, no constant left over. Test 1 passed: slope one half, offsets from the Dial, nothing fitted.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s04_88aca22cb1efbef1.mp4">
+<aside class="notes" data-markdown="">Two routes to chi_zz at Delta_z = 0.3, gamma = 0.2: the correlator sum (iDMRG) gives 0.1106; the n = 2 asymmetry minus half log ell settles to c_1 = -0.1834, and chi_zz = e^(2 c_1)/(2 pi) = 0.1103, a quarter of a percent apart; c_1 &lt; 0 because chi_zz &lt; 1/(2 pi). Repeats: attractive side (c_1 0.2111 vs formula 0.2133) and the free line (exact 0.2, asymmetry road 0.1998); caution: chi_zz/M = 0.78 at gamma = 0.25, the star value 1 is the gamma -&gt; 0 limit (4.10). If asked: the main text quotes the inverted value as about 0.110 (c_1 about -0.183); the direct 0.110552 is in the data table of App. D, and the badge 0.25 % uses the full values.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s05_49600f25a7f3d8e8.mp4">
+<aside class="notes" data-markdown="">Part 3's closing sum returns: the variance is a sum over excited states, one term per state; call chi_zz the budget (the yellow outline). The factory's double flip: gamma flips two neighbours at once and the charge jumps by two (counter on one z snapshot of Octo's stripes); the charge leaks, Q-dot = i[H, Q] != 0. One-line identity: for an eigenstate at energy E_k, <k|q-dot|0> = i E_k <k|q|0>, so each term is a leak rate squared over an energy squared, and for the whole chain, per site, chi_zz = (2/L) sum |<k|q-dot|0>|^2 / E_k^2 (chi_zz = 2 Var(Q)/L, the chain version of 3.11's chi_zz = 2 lim Var(Q_A)/ell). Bars over energy, all positive, the lightest tallest (cartoon heights); stacked, they fill the line exactly. Key move: every bar is positive, so keeping only the ones you can compute gives a lower bound; the lightest two are next (4.7). Black box: the sum rule, its one-line step, and the list of the lightest states with a bar taken on faith from 3.10b (heavier states add more positive bars).</k|q-dot|0></k|q|0></k|q-dot|0></aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s06_fa969825c9d8117f.mp4">
+<aside class="notes" data-markdown="">Energy axis in units of vM: the pink bound-pair bar at 1.78 under the two-wall threshold at 2, the orange two-wall hump from 2 (peak near 2.67), the grey heavier tail from 3.78 (unknown, positive). The budget divided by M is c; bar plus hump is a lower bound on c, not a prediction; the hump's shape is a function Lukyanov found, its size fixed by one more identity and the free point, nothing fitted.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s06_571e2146e76cac3e.mp4">
+<aside class="notes" data-markdown="">Headline at xi = 0.70: bar 0.537 plus hump 0.299 = 0.836, a lower bound; the computer's 0.843(4) sits just above it, inside the thin corridor [0.8368, 0.8450] that 4.9 explains. Sweeping xi from 0.5 to the free point the bar slides up to the threshold and its weight shrinks to nothing, handing its slope to the hump; two lines, one family. Black box: a function Lukyanov found, size fixed by Hellmann-Feynman and the free point.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s07_564023b332e85684.mp4">
+<aside class="notes" data-markdown="">Baxter (1972) and Johnson, Krinsky and McCoy (1973), drawn as a white machine: two couplings in, an inverse length out; at the home coupling Delta_z = 0.3, gamma = 0.2 it gives M = 0.10836 (jkm_exact.py), a kink about 9.2 sites long, longer than Octo. Light 1: on the XY line (Delta_z = 0) it reduces to M = atanh gamma. Light 2: on log axes the exact M at Delta_z = 0, 0.3, 0.5 straightens at small gamma with slopes 1, 1.24, 1.5 = pi/(2 theta_0), theta_0 = arccos Delta_z (the gamma -&gt; 0 exponents, not fits). Inside are elliptic functions (M = atanh k1', k1' an elliptic modulus, App. C); we never open the box and use only its output, to 20 digits, never a fitted mass.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s08_39d63ae91ab8f943.mp4">
+<aside class="notes" data-markdown="">Substitute chi_zz = c(beta^2) M (the budget, 4.7) and M's small-gamma law (4.8) into the master formula: Eq. (final), gamma and Delta_z in, the asymmetry out, beta^2 standing in for Delta_z (theta_0 = arccos Delta_z, beta^2 = 1 - theta_0/pi); valid for gamma -&gt; 0 and ell M &gt;&gt; 1. Fig. 2(b) at fixed ell M = 8: the n = 2 line uses the lower bound for c, n -&gt; 1, 3, 5 are the same curve shifted by the Dial, the star is the free point, the squares (the computer's c, converted) are copied onto every branch by the same rigid Dial shift and ride on the lines or a hair above where the bound is not tight (most visibly at Delta_z = 0.5, xi = 2, by 0.017; two marginal points 0.0025 and 0.0007 below). Finite-gamma corrections (a power series and a lattice-only fractional power) are named, used in the error bars (4.10), never shown.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s09_393d599eff4c0572.mp4">
+<aside class="notes" data-markdown="">Fig. 1 rebuilt: beta^2 axis with the matching Delta_z from the Map on top; the star at (1/2, 1), free fermions; the line is the bar plus the hump, a lower bound. Left of the star two more sum rules squeeze the unknown tail into a corridor thinner than a symbol; right of it only the dashed lower edge survives, a hair above the line. Black box: the moment corridor.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s09_217dcac4e9b81206.mp4">
+<aside class="notes" data-markdown="">Eight iDMRG squares, each a gamma -&gt; 0 extrapolation, honour the line within the combined fit-and-extrapolation uncertainty; the four attractive ones sit inside the corridor. Two repulsive centres sit a hair under the line (1.119 vs 1.1242, 1.289 vs 1.2909) but the corridor's lower edge lies above the line there, so they are extrapolation systematics, not violations; 4.10 shows how an error bar is made.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s09_b7f10adc4ad29f80.mp4">
+<aside class="notes" data-markdown="">Zoom at xi = 2: 1.695(26) against the bound 1.637 (the corridor's edge 1.6447 just above it): a clear excess. That is the tail switching on as the square of the distance from the star: the grey parabola, the leading term, coefficient about 0.08, an estimate, with a rigorous floor of 0.012. Test 3: a lower bound honoured within the uncertainties at eight couplings; the corridor holds at all four attractive ones. (The grey curve is the line plus c_4k. Its leading-order term overshoots at xi = 1.48 and 1.71, since the finite-xi dressing is omitted (paper, four-kink appendix), and matches xi = 2, 1.717 against 1.695(26). It is an estimate, not a fit.)</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s10_2b4c91602caf9625.mp4">
+<aside class="notes" data-markdown="">Delta_z = 0.3: the computer's c = chi_zz/M at gamma = 0.10, 0.14, 0.20 (home), 0.28 reads 1.1379, 1.0872, 1.0202, 0.9422 (iDMRG, exact M). Four roads to gamma = 0 (two quadratics, a cubic, the umklapp form with s = 1.675 fixed by Delta_z) arrive at 1.2855, 1.2786, 1.2930, 1.2853. Adopted: mean of cubic and umklapp 1.289, error half the spread, 1.289(7); the lower bound 1.2909 sits inside the bar. The D digits (0.033726, 0.033723, 0.033723 at D = 64, 96, 128; Delta_z = 0.5, gamma = 0.1) show the computer's own error is far smaller than the road's. Black box: the gamma -&gt; 0 extrapolation forms.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s11_86ab337eaf0723fa.mp4">
+<aside class="notes" data-markdown="">Fig. 5 of the paper at Delta_z = 0.3, gamma = 0.2, shown as published (PNG, nothing drawn on it), in front of the ghosted coins of Part 2 (bump in alpha, Bell in q). Panel (a): -log Z_2(alpha)/ell for ell = 4, 8, 12 falls onto the parabola (chi_zz/2) alpha^2, the Gaussian saddle of 2.10 that turned V into 1/2 log(4 pi V). Panel (b): P(Q_A) broadens with ell; the solid curves are bells of the measured variance, which tends to ell chi_zz/2. One number, chi_zz (chi_zz/2 = 0.0553, notes only), governs both panels and fixes the asymmetry. No ring toy in this scene (P4-14).</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s12_9b8ae8ce4741fb01.mp4">
+<aside class="notes" data-markdown="">The paper's Fig. 3 (window of twelve spins, Delta_z = 0.3): at gamma = 0 the chain is symmetric and the meter reads zero; turning gamma up the meter rises, ordered by n (n -&gt; 1 on top, then 2, 3, infinity). The ruler 1/M grows as gamma shrinks: 9.2 sites at gamma = 0.2 (white, inside the window, the master formula applies), 21.7 sites at gamma = 0.1 (grey, longer than twelve sites: the white tail takes over); M = 0.10836 and 0.046086 from jkm_exact.py; the crossing lies between 0.1 and 0.2 (not quoted); 51 sites at gamma = 0.05 if asked. Long windows and small gamma do not commute; this plot is the lattice echo of that. The curves are the paper's iMPS data, not an exact-diagonalization sweep.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s13_19ebf50399162051.mp4">
+<aside class="notes" data-markdown="">Eq. (final) with every light on: 1/2 log(pi ell) the Bell (2.10, 4.3); c(beta^2) the budget, the bar and the hump (4.6-4.7); the bracket with gamma Baxter's box (4.8); the gold term the Dial (2.11); chi_zz = c(beta^2) M. Two legs: chi_zz at Delta_z = 0.3, gamma = 0.2 by two routes, 0.1106 (paper: c_extrap_data.json) and 0.1103 (closed form from asym_production.json c1_inf); c at xi = 0.70 (Delta_z = -0.2737, gamma -&gt; 0): the computer's 0.843(4) inside the corridor [0.8368, 0.8450]. The Discussion sentence (main.tex 298-299). Take-home: the meter reads half the log of the variance, nothing fitted; the variance is a budget two particles bound from below; Baxter's exact length closes the formula in lattice variables.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s13_7a8aa2d7292ef5b1.mp4">
+<aside class="notes" data-markdown="">Triptych: general (the meter grows as half the log of the window; for the paper's states, half the log of the charge variance plus the Dial), specific (chi_zz = c(beta^2) M, M exact, c bounded below by two particles), open (the tail, Delta_z &gt; 1, fields, quenches and the Mpemba baseline). The Ledger, read by title only, page 1 of 3: V = Var(Q_A) on faith (App. A); which column of V_var_exhibit.json is V; Part 2's faith items (2023 definition, Mpemba, Delta S &gt;= 0); Part 3's faith items (Jordan-Wigner, Hastings-Koma, the continuum dictionary, iDMRG); the Dial's replica integral and the n -&gt; 1 continuation.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s13_a33e6ae2bc03e7b7.mp4">
+<aside class="notes" data-markdown="">Ledger page 2 of 3: the sum rule's step, the bars' states and Lukyanov's function, Hellmann-Feynman; the Fig. 1 line is a lower bound and the corridor is two-sided only for xi &lt; 1; A ~ 0.08 is an estimate (c4k_results.json; about 20 % truncation systematic, from its note: ~20 % at xi = 2) with rigorous floor A &gt;= 0.012; M from Baxter/JKM, an inverse length; Eq. (final)'s range of validity.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s13_4237b5b9cf2fe333.mp4">
+<aside class="notes" data-markdown="">Ledger page 3 of 3: error bars from four fit forms, the two marginal points stay out; 0.78 on the free line at gamma = 0.25 (Delta_z = 0, closed form (0.25/1.25)/atanh(0.25): chi_zz = gamma/(1+gamma), M = atanh gamma); Fig. 3 and Fig. 5 are PNGs; the anchor coupling is inferred; four helper symbols beyond the roadmap's four.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s13_e09f5ecc83e51a11.mp4">
+<aside class="notes" data-markdown="">The open list: Delta_z &gt; 1 beyond the Neel-x phase (staggered breaking, the same marginality); a field coupled to the broken charge; after a quench, Eq. (final) is the equilibrium baseline for Mpemba-type behaviour; the tail (resum the four-kink term, a repulsive-side f-sum rule would close the corridor). Cliffhanger: what does the meter read beyond the Neel-x phase, in a field, or after a quench? That is the research frontier, where this series ends (all four dots lit).</aside>
+</section>
+</div>
+</div>
+<script src="index_assets/reveal.js"></script>
+<script src="index_assets/notes.js"></script>
+<!-- To include plugins, see: https://revealjs.com/plugins/ -->
+<script src="index_assets/markdown.js"></script>
+<!-- <script src="index.js"></script> -->
+<script>
+      Reveal.initialize({
+        /// The list of RevealJS plugins.
+        plugins: [ RevealMarkdown, RevealNotes ],
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+        // Display presentation control arrows
+        controls: true,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: true,
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: 'all',
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
+        hashOneBasedIndex: false,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: false,
+        // Enable support for jump-to-slide navigation shortcuts
+        jumpToSlide: true,
+        // Push each slide change to the browser history.  Implies `hash: true`
+        history: false,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
+        keyboardCondition: null,
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
+        navigationMode: 'default',
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the question-mark
+        // key is pressed
+        help: true,
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null:   Media will only autoplay if data-autoplay is present
+        // - true:   All media will autoplay, regardless of individual setting
+        // - false:  No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+        // Global override for preloading lazy-loaded iframes
+        // - null:   Iframes with data-src AND data-preload will be loaded when within
+        //           the viewDistance, iframes with only data-src will be loaded when visible
+        // - true:   All iframes with data-src will be loaded when within the viewDistance
+        // - false:  All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+        // Can be used to globally disable auto-animation
+        autoAnimate: true,
+        // Optionally provide a custom element matcher that will be
+        // used to dictate which elements we can animate between.
+        autoAnimateMatcher: null,
+        // Default settings for our auto-animate transitions, can be
+        // overridden per-slide or per-element via data arguments
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+        // CSS properties that can be auto-animated. Position & scale
+        // is matched separately so there's no need to include styles
+        // like top/right/bottom/left, width/height or margin.
+        autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+        // Controls automatic progression to the next slide
+        // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+        //           is present on the current slide or fragment
+        // - 1+:     All slides will progress automatically at the given interval
+        // - false:  No auto-sliding, even if data-autoslide is present
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Use this method for navigation when auto-sliding (defaults to navigateNext)
+        autoSlideMethod: null,
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Opens links in an iframe preview overlay
+        // Add `data-preview-link` and `data-preview-link="false"` to customize each link
+        // individually
+        previewLinks: false,
+        // Exposes the reveal.js API through window.postMessage
+        postMessage: true,
+        // Dispatches all reveal.js events to the parent window through postMessage
+        postMessageEvents: false,
+        // Focuses body when page changes visibility to ensure keyboard shortcuts work
+        focusBodyOnPageVisibilityChange: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+        // The maximum number of pages a single slide can expand onto when printing
+        // to PDF, unlimited by default
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+        // Prints each fragment on a separate slide
+        pdfSeparateFragments: true,
+        // Offset used to reduce the height of content within exported PDF pages.
+        // This exists to account for environment differences based on how you
+        // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+        // on precisely the total height of the document whereas in-browser
+        // printing has to end one pixel before.
+        pdfPageHeightOffset: -1,
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+        // The display mode that will be used to show slides
+        display: 'block',
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000
+      });
+      // Override SPACE to play / pause the video
+      Reveal.addKeyBinding(
+        {
+          keyCode: 32,
+          key: 'SPACE',
+          description: 'Play / pause video'
+        },
+        () => {
+          var currentVideos = Reveal.getCurrentSlide().slideBackgroundContentElement.getElementsByTagName("video");
+          if (currentVideos.length > 0) {
+            if (currentVideos[0].paused == true) currentVideos[0].play();
+            else currentVideos[0].pause();
+          } else {
+            Reveal.next();
+          }
+        }
+      );
+    </script>
+</body>
+</html>

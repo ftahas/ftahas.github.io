@@ -1,0 +1,31 @@
+# Talks shown on /talks/. Each entry of a series is one browser-playable deck under assets/talks/<series>/<folder>/
+# (index.html + index_assets/, exported by manim-slides), with poster.png and handout.pdf beside it.
+xyz_asymmetry:
+  - number: 1
+    folder: part1_entropy
+    title: Entanglement entropy
+    summary: The part that knows less than the whole. Two coins and two spins give the same tallies; the density matrix, its red corners and the partial trace show where the difference hides, and the entropy meter reads it from the eigenvalue bars.
+    scenes: 11
+    stops: 15
+    minutes: 14
+  - number: 2
+    folder: part2_asymmetry
+    title: Entanglement asymmetry
+    summary: A meter for a broken symmetry. Sorting the grid by charge, erasing the red blocks between charge drawers, and the Clock average that turns the asymmetry into half the log of the variance of a charge bell.
+    scenes: 12
+    stops: 24
+    minutes: 17
+  - number: 3
+    folder: part3_xyz
+    title: The XYZ chain
+    summary: One knob, a map, stripes, a gap, and misprints that move. The coupling gamma manufactures red corners, the gap buys a short memory, kinks come in pairs, and one measurable number, the susceptibility, comes out of iDMRG.
+    scenes: 15
+    stops: 23
+    minutes: 17
+  - number: 4
+    folder: part4_synthesis
+    title: Putting the blocks together
+    summary: The master formula and the paper's figures. The half-log law tested three ways on the paper's data, the mass machine, Fig. 1 rebuilt layer by layer, error bars, and the closed-form prediction in lattice variables.
+    scenes: 15
+    stops: 22
+    minutes: 18

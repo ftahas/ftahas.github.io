@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Part 2: Entanglement asymmetry</title>
+<link href="index_assets/reveal.css" rel="stylesheet"/>
+<link href="index_assets/black.css" rel="stylesheet"/>
+<!-- Theme used for syntax highlighting of code -->
+<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+<link href="index_assets/zenburn.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s00_9b07aaf26b802337.mp4" data-background-video-muted="">
+<aside class="notes" data-markdown="">Two objects from Part 1: the spin along x (top view, needle along x) and the dot, the fair coin. Twenty z measurements each give the same histogram, ten up and ten down. Their tables differ: the spin has one half in every cell, red corners included; the coin has black corners. The Meter could not tell which way the corners pointed, but it tells a pure table from a coin: eigenvalue bars 1 and 0, Meter 0 for the spin; one half and one half, log 2 for the coin.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s00_5607938a6e6b1e0e.mp4">
+<aside class="notes" data-markdown="">The move this part is about: a friend measures your spin along z, writes the result down and never tells you. You know it is up or down, not which: that is the coin. The red corners are gone, the bars are flat and the Meter has climbed from 0 to log 2; the secret cost log 2 (gold). The same ruler over the coin changes nothing: it was already a coin; the secret cost 0.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s00_c29f80df8cc3e8dc.mp4">
+<aside class="notes" data-markdown="">That cost is the meter we build today. New: defined in 2023 (Ares, Murciano, Calabrese); in 2024 it explained the quantum Mpemba effect (Rylands and co-workers), seen with trapped ions the same year (Joshi and co-workers); a 2025 review. Black box: the definition is taken from those papers; the Mpemba effect is named, never derived; the paper reads how far a window sits from a symmetry the ground state breaks. Our question: what did the secret cost, and why does it grow with the window?</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s01_3242d5f159222b13.mp4">
+<aside class="notes" data-markdown="">The rule, seen from the top: rotate every spin about z by the same angle alpha; needles in the plane turn together, arrows along z do not move. Its charge Q_A = ups minus downs, halved = 1/2 sum sigma^z: up up down up gives 1, and the rule cannot change it. The sixteen kets of the window sorted into five drawers, 1, 4, 6, 4, 1 (q = 2 to -2 in the sector colours). The rotation multiplies a drawer state by e^{i alpha q}: a needle turning q times per turn of alpha, none for q = 0. The legend docks for the rest of the series; odd windows have half-integer charges but integer differences.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s02_c054e14cf93eb2bc.mp4">
+<aside class="notes" data-markdown="">The 16x16 Grid of the l = 4 window of the pinned L = 16 ring (Delta_z = 0.3, gamma = 0.2), rows and columns reordered by drawer q = 2, 1, 0, -1, -2: five diagonal blocks of sizes 1, 4, 6, 4, 1 in the sector colours, every off-diagonal block red and hatched with its weight (one apart 0.347, two 0.050, three 0.003; the two corners four apart unnumbered; the diagonal blocks together 0.383), so the neighbouring drawers talk most; rho_A = sum_{q,q'} Pi_q rho_A Pi_{q'}, Pi_q keeps what sits in drawer q; every block shrunk to one cell gives the 5x5 cartoon (brightness = square root of the weight), the Grid for the rest of the part.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s03_274213f8d06bfeb9.mp4">
+<aside class="notes" data-markdown="">One tilted spin in the top view with its 2x2 Grid: two drawers q = +1/2, -1/2, two red corners, mirror images. Rotating by alpha grows a purple needle on each corner, the two turning opposite ways; the colours never change. The 5x5 cartoon of the l = 4 window: every red cell grows a needle, one drawer from the diagonal turns once per turn of alpha, two drawers twice, three three times, the corners four times; the diagonal cells do not turn. The formula rho_qq' -&gt; e^{i alpha (q - q')} rho_qq': speed = charge difference. The Bell pair sorted by charge: its two corners pair up-down with down-up, the same charge, inside the q = 0 block; nothing turns. Its red corners are not the kind this rule can see. If asked why the spin's needle and the cell needles turn opposite ways: the Bloch needle turns by -alpha and the (q, q') cell by +alpha (q - q'); both are what e^{i alpha Q_A} rho e^{-i alpha Q_A} does.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s04_2f596b11d85ed474.mp4">
+<aside class="notes" data-markdown="">Vote. The Pause card alone: a friend measures the charge of the four-spin window (the magnet's window of 2.3) and never tells you the result; is the window now more certain, less certain, or the same? Hands up.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s04_a9fa38c91ebaabbb.mp4">
+<aside class="notes" data-markdown="">The 5x5 cartoon and the charge-sorted 16x16 Grid of 2.3; the grey z-ruler passes over both (a friend measures Q_A and does not tell): every off-block cell fades to black, every cell inside a diagonal block stays, the former corners inside the 6x6 block included. The erased table is rho_{A,Q} = sum_q Pi_q rho_A Pi_q. Its sixteen eigenvalue bars are flatter; the white Meter (Dial at n = 2) rises, never down (Black box: Delta S &gt;= 0, asserted; the circle average of 2.8 is the reason). The rise, painted gold, is the asymmetry Delta S^(2)_A = 0.715 (ring toy, pinned, L = 16; Delta_z = 0.3, gamma = 0.2), a difference of two Meter readings: the table after the secret measurement minus the table before; no red blocks, nothing to erase, zero. Beside it the paper's infinite-chain value 0.700 (iDMRG) as a thinner mark: a toy, and a close one. The answer to the vote: less certain.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s05_5902ee9de6a9073c.mp4">
+<aside class="notes" data-markdown="">Two toys on a napkin. One tilted spin: after the secret z measurement its table is the diagonal cos^2, sin^2 of theta/2, and the gold meter at n = 2 reads -log(cos^4 + sin^4): 0 at theta = 0, 0.1335 at 30 degrees, 0.4700 at 60, log 2 at 90 (the spin along x). One spin, no partner, and the meter moves. Second toy: one half on the diagonal, c in the corners; the secret measurement wipes out c and the answer is log(1 + 4c^2): 0 at c = 0, 0.3075 at c = 0.3, log 2 at c = 1/2; a mix of the spin along x and the fair coin, c sets the proportions.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s05_c179fac6940e8cfb.mp4">
+<aside class="notes" data-markdown="">The scoreboard: one spin of the Bell pair, Meter log 2, asymmetry 0; one spin along x, Meter 0, asymmetry log 2; the two meters disagree completely, and that is the point. In the papers this quantity is called the entanglement asymmetry; the name is historical: the spin along x has nothing to be entangled with and reads log 2, the Bell pair is as entangled as two spins get and reads 0. From here on: the asymmetry, or the Meter for the corners.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s06_7dd30a4dfa45355f.mp4">
+<aside class="notes" data-markdown="">Vote again. Octo, every arrow along x, a product state: the window's Meter reads zero whatever its size, and its Grid is dense, every cell the same grey, 1/16. As the window grows, what does the asymmetry do? Saturate, grow like log ell, or grow like ell? Hands up.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s06_b16f34ab6131fde5.mp4">
+<aside class="notes" data-markdown="">The shortcut for a pure window: after the secret measurement only the charge histogram P(q) is left (the diagonal blocks are rank one, their traces 1/16, 4/16, 6/16, 4/16, 1/16 are the eigenvalue bars), and the asymmetry is the Renyi entropy of that histogram; binomial for coins along x. Two spins 0.98, four 1.30, eight 1.63: each doubling adds about 0.48 log 2. On to 256 spins the slope settles at one half: half the log of ell, the answer in the middle (gold line, 'It grows like log ell' highlighted). Why one half: the binomial's bell widens like the square root of ell and the asymmetry is the log of that width; the next three scenes turn this sentence into a formula.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s07_bf7db5790e0978e5.mp4">
+<aside class="notes" data-markdown="">Three clocks, each hand e^{i m alpha}, alpha once round the circle: the m = 0 hand stands still, m = 1 goes round once, m = 2 twice. Average each hand over a full turn (the gold dot): for m = 0 the average is the hand itself; for every other m the running average spirals in to the centre, zero. Averaging over all rotations keeps m = 0 and kills the rest. As a formula, Pi_q = int dalpha/2pi e^{i alpha (Q_A - q)}: only drawer q survives, the hand that stands still; that is the drawer projector of 2.3.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s07_d4492495fd80496d.mp4">
+<aside class="notes" data-markdown="">Apply the clocks to the Grid: the 5x5 cartoon with its needles and, beside it, its running average; as alpha runs once round, every red block averages to black, the diagonal blocks stay: the average over all rotations is exactly the erased table, the friend's measurement is that average (z-ruler stamped). n = 2 was the overlap of two copies: overlap the Grid with its rotated copy, call it Z_2(alpha) (the purple bump), average over alpha (gold area) and you get the erased table's overlap with itself: Tr rho_{A,Q}^2 / Tr rho_A^2 = int dalpha/2pi Z_2(alpha); n = 2 is minus the log of an overlap. On the napkin toy: Tr[rho rho(alpha)] = 1/2 + 2c^2 cos alpha, its circle average 1/2 = Tr rho_{A,Q}^2, and the ratio, minus the log, is log(1 + 4c^2) = 0.3075 at c = 0.3, the 2.6 readout; nothing erased by hand. The identity is checked to 1e-6 on a random two-spin table (talknum). General n: one angle per copy on a ring of copies (2.11; App. A of the paper), on the Ledger.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s08_5d184f2e7d5a34aa.mp4">
+<aside class="notes" data-markdown="">Two coins. The charge histogram is 1/4, 1/2, 1/4. For a pure window the overlap with the rotated copy is the squared size of one complex number, the overlap of the state with its rotated self, the average of e^{i alpha q} over the histogram: three purple needles tip to tail, a quarter turning backwards, a half standing still, a quarter turning forwards; their sum stays on the real axis and traces cos^2(alpha/2) as the alpha arc sweeps. Squared: Z_2 = cos^4(alpha/2) (pure window; the mixed case waits for 4.2). The gold area under it over 2 pi is 3/8, and -log 3/8 = 0.981 is the first number of 2.7, with no 16x16 table touched.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s08_0eb67573dbcb9077.mp4">
+<aside class="notes" data-markdown="">Four panels, l = 2, 4, 16, 64: the bump Z_2 = cos^{2l}(alpha/2) (one factor cos(alpha/2) per spin along x, squared) narrows from panel to panel; the gold dashed Gaussian e^{-l alpha^2/4} laid over each is indistinguishable from it by l = 64; the white brace at half height shrinks like 1/sqrt(l). Z_2 ~ e^{-V alpha^2} with V = l/4: not a fit, the variance of the coins' charge histogram. Remember the letter V; it is tonight's open hole.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s09_909d90b126f265db.mp4">
+<aside class="notes" data-markdown="">Left: the purple bump Z_2(alpha) ~ e^{-V alpha^2} on the circle [-pi, pi]. Right: a Galton board, eight rows of pegs (each row one coin), sixty white dots fall along the stored walks (talknum, seed 20261020) and pile into 0, 2, 7, 11, 24, 11, 4, 1, 0: the charge histogram of eight spins. The pile fades into the gold P(q) bars at l = 16, then 32, a gold Gaussian of variance V = l/4 through the bar tops: the Bell. The two panels step l = 16 -&gt; 32 -&gt; 64 together: the bump narrows as the Bell widens, the two 1/e widths (1/sqrt(l), sqrt(l)) multiply to a constant: Fourier partners. The average: the area under the bump on [-pi, pi] shaded gold; the axis zooms out to [-3pi, 3pi], the circle's edges recede, the shading runs along the whole line (the tails we add are nothing). int d alpha/2pi e^{-V alpha^2} = 1/(2 sqrt(pi V)); minus the log: Delta S^(2)_A = 1/2 log(4 pi V) = 1/2 log(pi l) for coins.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s09_2f620b9b8e2eeb9f.mp4">
+<aside class="notes" data-markdown="">How good is it? The table: sixteen coins, exact 1.9665 against the formula 1.9587; two hundred and fifty-six coins, 3.3454 against 3.3450 (talknum coins_asymmetry, gaussian_asymmetry(l/4)). Half the log of the variance: a bell curve is known by its variance alone, and so is this meter.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s10_7190f7e44648d4d9.mp4">
+<aside class="notes" data-markdown="">Turn the Dial: the coins' asymmetry at n -&gt; 1, 2, 3, 5 against log ell is four parallel lines of slope one half. Only the offsets move, pure numbers log n/(2(n-1)): 0.5, 0.3466, 0.2747, 0.2012, with the common 1/2 log(2 pi V) written once; the gap between n = 2 and n = 3 is 0.0719, nothing fitted (no free parameter).</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s10_464dc3ec10d0d8bd.mp4">
+<aside class="notes" data-markdown="">Put n copies of the table on a loop with a Gaussian bump of the same width at every junction: like n beads on a loop of string it vibrates in n ways; the product of the n - 1 moving modes' frequencies is n, the mode that does not move has length root n, and their ratio is the 1/root n in front of (2 pi V)^{-(n-1)/2}: the gold offset. Two cards on faith: equal widths (the replica ring), and n -&gt; 1 as a limit (card again in 4.3).</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s11_312c195b0180bfd2.mp4">
+<aside class="notes" data-markdown="">Three things to take home. Sort the Grid by charge: inside a block nothing turns, outside every block spins, and erasing the outside is the friend's secret measurement. The asymmetry is the Meter's rise, and it needs no entanglement. For a pure window it is the entropy of the charge histogram, and for coins half the log of four pi V.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s11_d6973d9ee7aeb9a6.mp4">
+<aside class="notes" data-markdown="">The Ledger, read by title only, page one: Delta S &gt;= 0 asserted, the proof not shown; the circle-average identity checked on a 2x2 and a random two-spin table, the rest is App. A; the pure-state shortcut of 2.7-2.10, the mixed case is 4.2; circle extended to the line, bump replaced by its Gaussian; the replica loop and n -&gt; 1 on faith.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s11_4d6d89561041975c.mp4">
+<aside class="notes" data-markdown="">The Ledger, page two: the rotation sign (arrows -alpha, Grid needles +alpha); odd windows; ring numbers are toys (the L = 10 references of 2.3 and 2.5: 0.364 / 0.060 and 0.762), the paper's 0.700 is an infinite-chain value; the historical name said once, the Mpemba effect named, not explained; chi_zz flashed, not defined.</aside>
+</section>
+<section data-background-color="#111" data-background-size="contain" data-background-video="index_assets/s11_bfb45aa134d94e3c.mp4">
+<aside class="notes" data-markdown="">The hole, V: for coins it is ell over four, a binomial's variance (the gold token slides into the hole and out again while Octo comes in with every needle along x, the coins; chi_zz flickers beside the hole, not defined yet). Every second needle swings round into stripes alternating along x: a cartoon of the ground state of a magnet that prefers x over y; its real ground state is these stripes, blurred. What is its variance? Who sets it? And when the window is mixed, is V a variance at all? Part 3 (third dot pulsing).</aside>
+</section>
+</div>
+</div>
+<script src="index_assets/reveal.js"></script>
+<script src="index_assets/notes.js"></script>
+<!-- To include plugins, see: https://revealjs.com/plugins/ -->
+<script src="index_assets/markdown.js"></script>
+<!-- <script src="index.js"></script> -->
+<script>
+      Reveal.initialize({
+        /// The list of RevealJS plugins.
+        plugins: [ RevealMarkdown, RevealNotes ],
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+        // Display presentation control arrows
+        controls: true,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: true,
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: 'all',
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
+        hashOneBasedIndex: false,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: false,
+        // Enable support for jump-to-slide navigation shortcuts
+        jumpToSlide: true,
+        // Push each slide change to the browser history.  Implies `hash: true`
+        history: false,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
+        keyboardCondition: null,
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
+        navigationMode: 'default',
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the question-mark
+        // key is pressed
+        help: true,
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null:   Media will only autoplay if data-autoplay is present
+        // - true:   All media will autoplay, regardless of individual setting
+        // - false:  No media will autoplay, regardless of individual setting
+        autoPlayMedia: null,
+        // Global override for preloading lazy-loaded iframes
+        // - null:   Iframes with data-src AND data-preload will be loaded when within
+        //           the viewDistance, iframes with only data-src will be loaded when visible
+        // - true:   All iframes with data-src will be loaded when within the viewDistance
+        // - false:  All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+        // Can be used to globally disable auto-animation
+        autoAnimate: true,
+        // Optionally provide a custom element matcher that will be
+        // used to dictate which elements we can animate between.
+        autoAnimateMatcher: null,
+        // Default settings for our auto-animate transitions, can be
+        // overridden per-slide or per-element via data arguments
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+        // CSS properties that can be auto-animated. Position & scale
+        // is matched separately so there's no need to include styles
+        // like top/right/bottom/left, width/height or margin.
+        autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+        // Controls automatic progression to the next slide
+        // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+        //           is present on the current slide or fragment
+        // - 1+:     All slides will progress automatically at the given interval
+        // - false:  No auto-sliding, even if data-autoslide is present
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Use this method for navigation when auto-sliding (defaults to navigateNext)
+        autoSlideMethod: null,
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Opens links in an iframe preview overlay
+        // Add `data-preview-link` and `data-preview-link="false"` to customize each link
+        // individually
+        previewLinks: false,
+        // Exposes the reveal.js API through window.postMessage
+        postMessage: true,
+        // Dispatches all reveal.js events to the parent window through postMessage
+        postMessageEvents: false,
+        // Focuses body when page changes visibility to ensure keyboard shortcuts work
+        focusBodyOnPageVisibilityChange: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+        // The maximum number of pages a single slide can expand onto when printing
+        // to PDF, unlimited by default
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+        // Prints each fragment on a separate slide
+        pdfSeparateFragments: true,
+        // Offset used to reduce the height of content within exported PDF pages.
+        // This exists to account for environment differences based on how you
+        // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+        // on precisely the total height of the document whereas in-browser
+        // printing has to end one pixel before.
+        pdfPageHeightOffset: -1,
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+        // The display mode that will be used to show slides
+        display: 'block',
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000
+      });
+      // Override SPACE to play / pause the video
+      Reveal.addKeyBinding(
+        {
+          keyCode: 32,
+          key: 'SPACE',
+          description: 'Play / pause video'
+        },
+        () => {
+          var currentVideos = Reveal.getCurrentSlide().slideBackgroundContentElement.getElementsByTagName("video");
+          if (currentVideos.length > 0) {
+            if (currentVideos[0].paused == true) currentVideos[0].play();
+            else currentVideos[0].pause();
+          } else {
+            Reveal.next();
+          }
+        }
+      );
+    </script>
+</body>
+</html>

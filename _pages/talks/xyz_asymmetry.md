@@ -7,10 +7,6 @@ nav: false
 
 [&larr; all talks]({{ '/talks/' | relative_url }})
 
-A four-part animated presentation of my paper [Entanglement asymmetry in the gapped XYZ spin-1/2 chain](https://arxiv.org/abs/2607.25625), written for undergraduates who know linear algebra, probability and introductory quantum mechanics. The presentation is conceptual and analytical: formulas and pictures, no numerical results. Each part is a 20-25 minute live session. The animations were built with [Manim](https://www.manim.community/) and exported with [manim-slides](https://manim-slides.eertmans.be/); the slides play in the browser, no download needed.
-
-**How to drive a deck.** Click a part below: the first clip starts on its own. The right arrow (or `n`) plays the next stop, the left arrow replays the previous one, and space pauses or resumes the current clip. Press `f` for fullscreen, `o` for an overview of all stops, `s` for the speaker notes and `?` for every key. The clips are silent: the narration is spoken live, so the notes carry the cue sheet. The handout of each part has one page per stop, the last frame of each clip.
-
 {% assign talks_root = '/assets/talks/xyz-asymmetry' %}
 
 <div class="row row-cols-1 row-cols-md-2 mt-4">

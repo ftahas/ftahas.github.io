@@ -27,7 +27,7 @@ Derivadas. Interpretação geométrica e taxa de variação. Regras de derivaç�
 
 ### Avaliação
 
-- **Prova 1 (P1):** 21/10/2026
+- **Prova 1 (P1):** 21/10/2026 — [enunciado](../../assets/pdf/fuv/prova1.pdf) · [solução](../../assets/pdf/fuv/solucao_p1.pdf)
 - **Prova 2 (P2):** 04/12/2026
 - **Vista de prova / prova substitutiva:** 09/12/2026
 - **Prova de recuperação:** 11/12/2026
@@ -47,6 +47,7 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Lista de Exercícios 1](../../assets/pdf/fuv/lista01.pdf)
 - [Lista de Exercícios 2](../../assets/pdf/fuv/lista02.pdf)
 - [Lista de Exercícios 3](../../assets/pdf/fuv/lista03.pdf)
+- [Lista de Exercícios 4](../../assets/pdf/fuv/lista04.pdf)
 
 ### Bibliografia
 
@@ -64,6 +65,9 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 6 — Linearização e extremos](../../assets/pdf/fuv/aula06.pdf) (07/10/2026)
 - [Aula 7 — Como as derivadas afetam a forma de um gráfico](../../assets/pdf/fuv/aula07.pdf) (14/10/2026)
 - [Aula 8 — Regra de l'Hôspital e polinômios de Taylor](../../assets/pdf/fuv/aula08.pdf) (16/10/2026)
+- [Aula 9 — Primitivas, áreas e a integral definida](../../assets/pdf/fuv/aula09.pdf) (30/10/2026)
+- [Aula 10 — O Teorema Fundamental do Cálculo](../../assets/pdf/fuv/aula10.pdf) (04/11/2026)
+- [Aula 11 — A Regra da Substituição e a substituição trigonométrica](../../assets/pdf/fuv/aula11.pdf) (06/11/2026)
 
 *No evil stands time. As the pendulum swings, the sinful become sinless*
 

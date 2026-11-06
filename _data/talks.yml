@@ -1,5 +1,12 @@
-# Talks shown on /talks/. Each entry of a series is one browser-playable deck under assets/talks/<series>/<folder>/
-# (index.html + index_assets/, exported by manim-slides), with poster.png and handout.pdf beside it.
+# Talks shown on /talks/. `talks` is the numbered index; each talk has its own page under _pages/talks/ whose
+# cards come from the series key named in `series` (one browser-playable deck per entry, under
+# assets/talks/<series>/<folder>/: index.html + index_assets/ exported by manim-slides, plus poster.png and handout.pdf).
+talks:
+  - title: Entanglement asymmetry in the gapped XYZ spin-1/2 chain
+    permalink: /talks/xyz-asymmetry/
+    blurb: Four animated parts for undergraduates, from the entanglement entropy of a window to the paper's master formula. Built with Manim.
+    series: xyz_asymmetry
+
 xyz_asymmetry:
   - number: 1
     folder: part1_entropy
@@ -18,14 +25,14 @@ xyz_asymmetry:
   - number: 3
     folder: part3_xyz
     title: The XYZ chain
-    summary: One knob, a map, stripes, a gap, and misprints that move. The coupling gamma manufactures red corners, the gap buys a short memory, kinks come in pairs, and one measurable number, the susceptibility, comes out of iDMRG.
+    summary: One knob, a map, stripes, a gap, and misprints that move. The coupling gamma manufactures red corners, the gap buys a short memory, kinks come in pairs, and one measurable quantity, the susceptibility, comes out of the infinite-chain method.
     scenes: 15
     stops: 23
     minutes: 17
   - number: 4
     folder: part4_synthesis
     title: Putting the blocks together
-    summary: The master formula and the paper's figures. The half-log law tested three ways on the paper's data, the mass machine, Fig. 1 rebuilt layer by layer, error bars, and the closed-form prediction in lattice variables.
+    summary: The master formula and the paper's figures. The half-log law, two routes to one quantity, the mass machine, the structure of the paper's figures, how an error bar is made, and the closed-form prediction in lattice variables.
     scenes: 15
     stops: 22
     minutes: 18

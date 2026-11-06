@@ -2,7 +2,6 @@
 layout: page
 permalink: /talks/xyz-asymmetry/
 title: Entanglement asymmetry in the gapped XYZ spin-1/2 chain
-description: A four-part animated presentation, playable in the browser
 nav: false
 ---
 

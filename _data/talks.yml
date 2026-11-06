@@ -4,7 +4,6 @@
 talks:
   - title: Entanglement asymmetry in the gapped XYZ spin-1/2 chain
     permalink: /talks/xyz-asymmetry/
-    blurb: Four animated parts for undergraduates, from the entanglement entropy of a window to the paper's master formula. Built with Manim.
     series: xyz_asymmetry
 
 xyz_asymmetry:

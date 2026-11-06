@@ -33,5 +33,3 @@ A four-part animated presentation of my paper [Entanglement asymmetry in the gap
   </div>
 {% endfor %}
 </div>
-
-The decks are 1280x720 at 30 fps and total about 100 MB; each clip loads when its stop is reached, so a slow connection shows a short pause before a clip starts.

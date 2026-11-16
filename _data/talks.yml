@@ -5,6 +5,8 @@ talks:
   - title: Entanglement asymmetry in the gapped XYZ spin-1/2 chain
     permalink: /talks/xyz-asymmetry/
     series: xyz_asymmetry
+  - title: Assimetria de emaranhamento na cadeia XYZ de spin-1/2 com gap (QSul)
+    permalink: /talks/qsul/
 
 xyz_asymmetry:
   - number: 1

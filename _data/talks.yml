@@ -7,6 +7,12 @@ talks:
     series: xyz_asymmetry
   - title: Assimetria de emaranhamento na cadeia XYZ de spin-1/2 com gap (QSul)
     permalink: /talks/qsul/
+  - title: "Correlation aspects of interacting quantum systems in one dimension (MASQOT poster, 2024)"
+    permalink: /talks/masqot/
+  - title: "Correlation features of interacting bosons in one dimension (University of Warsaw, 2021)"
+    permalink: /talks/fuw-2021/
+  - title: "A study on quantum gases: bosons in optical lattices and the one-dimensional interacting Bose gas (University of Warsaw, 2020)"
+    permalink: /talks/fuw-2020/
 
 xyz_asymmetry:
   - number: 1

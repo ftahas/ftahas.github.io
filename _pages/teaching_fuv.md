@@ -68,6 +68,9 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 9 — Primitivas, áreas e a integral definida](../../assets/pdf/fuv/aula09.pdf) (30/10/2026)
 - [Aula 10 — O Teorema Fundamental do Cálculo](../../assets/pdf/fuv/aula10.pdf) (04/11/2026)
 - [Aula 11 — A Regra da Substituição e a substituição trigonométrica](../../assets/pdf/fuv/aula11.pdf) (06/11/2026)
+- [Aula 12 — Integração por partes e áreas entre curvas](../../assets/pdf/fuv/aula12.pdf) (13/11/2026)
+- [Aula 13 — Volumes](../../assets/pdf/fuv/aula13.pdf) (18/11/2026)
+- [Aula 14 — Integrais trigonométricas](../../assets/pdf/fuv/aula14.pdf) (18/11/2026)
 
 *No evil stands time. As the pendulum swings, the sinful become sinless*
 

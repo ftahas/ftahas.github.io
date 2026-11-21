@@ -30,7 +30,7 @@ Derivadas. Interpretação geométrica e taxa de variação. Regras de derivaç�
 - **Prova 1 (P1):** 21/10/2026 — [enunciado](../../assets/pdf/fuv/prova1.pdf) · [solução](../../assets/pdf/fuv/solucao_p1.pdf)
 - **Prova 2 (P2):** 04/12/2026
 - **Vista de prova / prova substitutiva:** 09/12/2026
-- **Prova de recuperação:** 11/12/2026
+- **Prova de recuperação:** 16/12/2026
 
 ### Atendimento docente
 
@@ -48,6 +48,7 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Lista de Exercícios 2](../../assets/pdf/fuv/lista02.pdf)
 - [Lista de Exercícios 3](../../assets/pdf/fuv/lista03.pdf)
 - [Lista de Exercícios 4](../../assets/pdf/fuv/lista04.pdf)
+- [Lista de Exercícios 5](../../assets/pdf/fuv/lista05.pdf)
 
 ### Bibliografia
 

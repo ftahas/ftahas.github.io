@@ -27,7 +27,7 @@ Derivadas. Interpretação geométrica e taxa de variação. Regras de derivaç�
 
 ### Avaliação
 
-- **Prova 1 (P1):** 21/10/2026 — [enunciado](../../assets/pdf/fuv/prova1.pdf) · [solução](../../assets/pdf/fuv/solucao_p1.pdf)
+- **Prova 1 (P1):** 21/10/2026 — [enunciado](../../assets/pdf/fuv/prova1.pdf) · [solução](../../assets/pdf/fuv/solucao_p1.pdf) · notas: [diurno](../../assets/pdf/fuv/notas_P1_diurno.pdf) · [noturno](../../assets/pdf/fuv/notas_P1_noturno.pdf)
 - **Prova 2 (P2):** 04/12/2026
 - **Vista de prova / prova substitutiva:** 09/12/2026
 - **Prova de recuperação:** 16/12/2026

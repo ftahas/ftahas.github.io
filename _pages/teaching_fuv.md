@@ -73,7 +73,7 @@ Listas de exercícios de FUV disponibilizadas pelo GradMat: [cursos.ufabc.edu.br
 - [Aula 13 — Volumes](../../assets/pdf/fuv/aula13.pdf) (13/11/2026)
 - [Aula 14 — Integrais trigonométricas](../../assets/pdf/fuv/aula14.pdf) (18/11/2026)
 - [Aula 15 — Trabalho e centro de massa](../../assets/pdf/fuv/aula15.pdf) (25/11/2026)
-- [Aula 16 — Integração de funções racionais por frações parciais](../../assets/pdf/fuv/aula16.pdf) (02/12/2026)
+- [Aula 16 — Integração de funções racionais por frações parciais](../../assets/pdf/fuv/aula16.pdf) (27/11/2026)
 
 *No evil stands time. As the pendulum swings, the sinful become sinless*
 
